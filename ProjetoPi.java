@@ -7,6 +7,7 @@ public class ProjetoPi {
         int menu;
 
         do {
+        System.out.println("Testando");
         System.out.println("*-* MENU *-* ");
         System.out.println("\n1 - Novo Jogo");
         System.out.println("2 - créditos dos criadores");
