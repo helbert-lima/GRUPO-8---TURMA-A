@@ -66,6 +66,8 @@ public class ProjetoPi {
                 capitulo_2();
             } else if (escolha_capitulo == 3) {
                 capitulo_3();
+            } else if (escolha_capitulo == 4) {
+                capitulo_4();
             } else {
                 System.out.println("\nOpção inválida, digite novamente: ");
             }
@@ -89,10 +91,15 @@ public class ProjetoPi {
 
     }
 
+    static void capitulo_4() {
+
+    }
+
     static void creditos() {
         Scanner entrada = new Scanner(System.in);
         int escolha_menu, temp_narrativa = 150;
-        System.out.println("\n\n</> Desenvolvedores </>\n\n-> Helbert \n-> Juan Miller \n-> Melina Michele \n-> Rômulo Andrade");
+        System.out.println(
+                "\n\n</> Desenvolvedores </>\n\n-> Helbert \n-> Juan Miller \n-> Melina Michele \n-> Rômulo Andrade");
         do {
             System.out.println("\n2 - Sair");
             escolha_menu = entrada.nextInt();
