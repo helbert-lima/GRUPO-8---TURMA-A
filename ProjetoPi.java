@@ -6,21 +6,26 @@ public class ProjetoPi {
 
     public static void main(String[] args) throws Exception {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("\nAPRESENTAÇÃO DO JOGO “A JORNADA DO NOVATO”\n"
-                + "Bem-vindo ao RPG \"A Jornada do Novato\"! Neste jogo, você vai mergulhar na vida de Alex, um jovem\n"
-                + "recém-formado cheio de sonhos que acaba de ser contratado pela empresa \"CorpoTech\". Sua\n"
-                + "missão é ajudar Alex a navegar pelos desafios do mundo corporativo, aprender sobre administração\n"
-                + "e tomar decisões que afetarão o destino da empresa e seus funcionários.\n"
-                + "Alex precisa encontrar o equilíbrio entre eficiência e bem-estar dos funcionários. Suas escolhas\n"
-                + "determinarão o resultado final. Vamos começar!");
+        System.out.println("\n..:: A JORNADA DO NOVATO..:: \n"
+                + "Bem-vindo ao RPG \"A Jornada do Novato\"! Neste jogo você deverá decidir o futuro de um jovem indeciso e perdido.\n");
+        avancarDialogo();
+        System.out.println("Sem muito rumo ou noção do que deseja, ele se dá de cara com a impiedosa realidade da vida adulta.\"Preciso de um emprego.\". \n"
+                //+ "missão é ajudar Alex a navegar pelos desafios do mundo corporativo, aprender sobre administração\n"
+                + "E com essas palavras dá-se ínicio a jornada de um novato no mundo corporativo. \n"
+                + "Seu objetivo agora é se preparar para uma entrevista de emprego, algo que certamente não lhe foi ensinado na escola.\n");
+        avancarDialogo();
+        System.out.println("Restante da história a desenvolver.\n");
+        //                + "determinarão o resultado final. Vamos começar!");
+        System.out.println("Eai, tá pronto?");
+
         System.out.println("\n1 - Estou pronto. | 2 - Eu nasci pronto |3 - Sei lá...");
         int escolha_menu = entrada.nextInt();
         if (escolha_menu == 1 || escolha_menu == 2) {
-            System.out.println("\nMestre: Conheça o alvorecer da escuridão!");
+            System.out.println("\nMestre: Conheça o pavor da vida adulta!");
             menu();
         } else if (escolha_menu == 3) {
             System.out.println(
-                    "\nMestre: Não se engane jovem, não é como se você tivesse muita escolha... Abrace o destino!");
+                    "\nMestre: Não se engane jovem, não é como se você tivesse muita escolha... Aceite ou seja derrotado pelos boletos!");
             menu();
         } else {
             System.out.println(
@@ -109,5 +114,18 @@ public class ProjetoPi {
                 System.out.println("\nOpção inválida, digite novamente: ");
             }
         } while (escolha_menu != 2);
+    }
+
+    static Boolean avancarDialogo() {
+        System.out.println("\nPressione ENTER para avançar.\n");
+        Scanner entrada = new Scanner(System.in);
+        String avancar = entrada.nextLine();
+
+        if (avancar.equals("")) {
+            return true; 
+        } else {
+            System.out.println("Por favor, pressione Enter para avançar.");
+            return false; 
+        }
     }
 }
