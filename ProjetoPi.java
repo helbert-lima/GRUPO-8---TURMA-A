@@ -86,7 +86,6 @@ public class ProjetoPi {        static String nome_jogador;
         Scanner entrada = new Scanner(System.in);
         System.out.println("\nOlá tudo bem? poderia me dizer o seu nome?\n");
         nome_jogador = entrada.next();
-        avancarDialogo();
         System.out.println("\n" + nome_jogador + " vê-se diante a recepção da empresa \"CorpoTech\". Logo a sua frente está uma funcionária da empresa; ao que tudo indicaria, uma recepcionista.");
         System.out.println("\n" + nome_jogador + " ouviu má boatos sobre essa tal de CorpoTech. Mas não é como se ele(a) tivesse o benefício da escolha."
         + "\nE por ter a audácia de não ter nascido sobrinho do gerente, terá de iniciar sua carreira em um degrau mais baixo da hierarquia.\n");
@@ -114,6 +113,8 @@ public class ProjetoPi {        static String nome_jogador;
 
         avancarDialogo();
 
+        int respostasCorretas = 0;
+        String resposta_pergunta_1 = entrada.next();
         System.out.println("\n" + nome_jogador + " entra na sala, deparando-se com um entrevistador sério."
             + "\nA atmosfera pesada e a tensão no ar são quase palpáveis."
             + "\nEntrevistador: Bom dia, " + nome_jogador + ". Por favor, sente-se."
@@ -122,13 +123,13 @@ public class ProjetoPi {        static String nome_jogador;
             "               Acerte as respostas para passar na entrevista de emprego!\n\n"
             + "Pergunta 1: Como você descreveria suas habilidades de trabalho em equipe?\n"
             + "\nA - Tenho dificuldade em trabalhar com outras pessoas\n"
-            + "\nB - Eu trabalho bem em equipe e colaboro efetivamente”\n"
+            + "\nB - Eu trabalho bem em equipe e colaboro efetivamente\n"
             + "\nC-  Prefiro trabalhar sozinho e evitar equipes\n"
             + "\nD-  nois trabalha sem câoh tá ligado meu? nois é responsa mano.\n"
             );
 
-            String resposta_pergunta_1 = entrada.next();
-            int respostasCorretas = 0;
+            
+            
 
             if (resposta_pergunta_1.equalsIgnoreCase("B")) {
                 System.out.println("\nEntrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
@@ -216,11 +217,14 @@ public class ProjetoPi {        static String nome_jogador;
 
             int totalPerguntas = 5;
             if (respostasCorretas == totalPerguntas) {
-                System.out.println("\n"+ nome_jogador + " gostei bastante da sua abordagem as perguntas. Acredito que você se encaixará bem na cultura de nossa empresa. Quer começar semana que vem?"
-                + "A entrevistadora se levanta com um sorriso acolhedor e estende a mão para " + nome_jogador + "\n" 
+                System.out.println("\nEntrevistador: "+ nome_jogador + " gostei bastante da sua abordagem as perguntas..."
+                + "Acredito que você se encaixará bem na cultura de nossa empresa."
+                + "\nQuer começar semana que vem?"
+                + "A entrevistadora se levanta da cadeira com um sorriso acolhedor e estende a mão para " + nome_jogador + "\n" 
                 + nome_jogador+ " se levanta, sem sinais de nervosismo e com sua auto-estima revigorada, aperta a mão da entrevistadora e se retira da sala."
                 + "\nAtrás de si uma porta se fecha. Só o que resta agora é o Jornada em frente."
                 );
+                avancarDialogo();
                 capitulo_2();
             } else {
                 System.out.println("\nEntrevistador: Obrigado por comparecer. Lhe daremos uma devolutiva após a finalização do processo seletivo. Fique no aguardo!\n");
@@ -293,21 +297,22 @@ public class ProjetoPi {        static String nome_jogador;
         Scanner entrada = new Scanner(System.in);
         System.out.println( "\n\n     ..:: CAPITULO 2 ::..         \n" + "\n     OS ANSEIOS DOS RECURSOS HUMANOS         \n\n\n");
         System.out.println(nome_jogador+ " se viu novamente nos corredores da CorpoTech.\n"
-        + "Andando em direção a um corredor que parecia não ter fim, estranhou a falta de pessoas naquele dia."
-        + "\n\"Será que é um feriado e eu não tô sabendo?\"\n"
-        + "Estava mais frio que o comum." + nome_jogador + " nunca teve um ar-condicionado em sua vida, seria essa a origem dessa friaca?\n"
+        + "Andando em direção a um corredor que parecia não ter fim, estranhou a falta de pessoas naquele dia.\n"
+        + "\n\n\"Será que é um feriado e eu não tô sabendo?\"\n\n");
+        avancarDialogo();
+        System.out.println("Estava mais frio que o comum." + nome_jogador + " nunca teve um ar-condicionado em sua vida, seria essa a origem dessa friaca?\n"
         + "A sensação de estar perdido aumenta a cada porta que ele(a) passa. A distância, é possível avistar uma porta familiar...\n"
         + "Ao chegar mais perto" + nome_jogador+ "vê que trata-se da infâme sala 18.\n"
         + "Você: Mas... eu passei na entrevista.. não é?... eu tô ansioso de novo?");
         avancarDialogo();
         System.out.println("\nUma ventania forte passa por trás dele(a) e abre a porta. No local onde uma vez estava a entrevistadora agora está uma figura escura e misteriosa\n"
-        + "A figura dá uma investida em direção de(a) " +nome_jogador+ " e então..."
+        + "A figura olha nos olhos de" + nome_jogador+ " e dá uma investida em direção de(a) " +nome_jogador+ " e então..."
         + "**Plim plim plim!!**\n"
         +"Era o som de seu despertador."
         );
         avancarDialogo();
-        System.out.println("Alex acorda em seu apartamento. A luz do sol invade o quarto, destacando a estante de livros e o\r\n" + //
-                "diploma recém-conquistado na parede. Ele recebe uma mensagem no telefone informando sobre\r\n" + //
+        System.out.println("Alex acorda em seu apartamento. \nA luz do sol invade o quarto, destacando a estante de livros e o\r\n" + //
+                "diploma recém-conquistado na parede. \nEle recebe uma mensagem no telefone informando sobre\r\n" + //
                 "o primeiro dia de treinamento na \"CorpoTech\".");
                 //Para começar bem o seu dia, Alex decide:
                 //Opção 1: Preparar um café reforçado, querendo enfrentar o dia com energia.
