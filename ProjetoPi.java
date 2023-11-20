@@ -115,7 +115,7 @@ public class ProjetoPi {        static String nome_jogador;
 
         System.out.println("\n" + nome_jogador + " entra na sala, deparando-se com um entrevistador sério."
             + "\nA atmosfera pesada e a tensão no ar são quase palpáveis."
-            + "\n- Bom dia, " + nome_jogador + ". Por favor, sente-se. - Diz o entrevistador"
+            + "\nEntrevistador: Bom dia, " + nome_jogador + ". Por favor, sente-se."
             + "\nO coração acelera, mas é hora de mostrar sua melhor versão.\n");
             System.out.println("*---* Você está prestes a participar de um jogo de múltipla escolha, onde apenas uma das opções é correta. *---*\n"+
             "               Acerte as respostas para passar na entrevista de emprego!\n\n"
@@ -136,6 +136,125 @@ public class ProjetoPi {        static String nome_jogador;
                 System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
             
+            string resposta_pergunta_2 = entrada.next();
+
+            System.out.println("Pergunta 2: Como você lida com feedback e críticas construtivas?"
+            + "\nA - Fico defensivo e não gosto de receber feedback"
+            + "\nB - Valorizo feedback e tento melhorar com base nele"
+            + "\nC - Eu não costumo receber feedback porque sou perfeito"
+            + "\nD - É o seguinte meoh eu não gosto de recalque não menor"            
+            );
+
+             if (resposta_pergunta_2.equalsIgnoreCase("B")) {
+                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+            } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+                System.out.println("\n- Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+            } else {
+                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+            }
+            
+            string resposta_pergunta_3 = entrada.next();
+
+            System.out.println("Pergunta 3: Como você prioriza suas tarefas quando tem várias para fazer?"
+            + "\nA - Eu fico sobrecarregado e não sei por onde começar."
+            + "\nB - Eu priorizo tarefas com base em sua importância e prazos."
+            + "\nC - Eu procrastino e deixo udo para a última hora."
+            + "\nD - \"Nois\" tá sempre no corre sabe como é ne, a vida não perdoa os \"cria.\""            
+            );
+
+             if (resposta_pergunta_3.equalsIgnoreCase("B")) {
+                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+            } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+                System.out.println("\n- Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+            } else {
+                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+            }
+
+            string resposta_pergunta_4 = entrada.next();
+
+            System.out.println("Pergunta 4: Como você lida com situações de conflito no local de trabalho?"
+            + "\nA - Eu evito conflitos a todo o custo e não me envolvo"
+            + "\nB - Eu tento resolver conflitos de maneira construtiva e comunicativa."
+            + "\nC - Eu geralmente sou a causa dos conflitos."
+            + "\nD - Tem que botar ordem nesses folgado ta ligado?"            
+            );
+
+             if (resposta_pergunta_4.equalsIgnoreCase("B")) {
+                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+            } else if (resposta_pergunta_4.equalsIgnoreCase("D")) {
+                System.out.println("\n- Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+            } else {
+                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+            }
+
+            tring resposta_pergunta_5 = entrada.next();
+
+            System.out.println("Pergunta 5: Qual é a sua abordagem ao aprender novas habilidades ou tecnologia?"
+            + "\nA - Eu não gosto de aprender coisas novas"
+            + "\nB - Estou disposto a aprender e me manter atualizado."
+            + "\nC - Eu já sei tudo o que é importante."
+            + "\nD - Eu falo com o Dérick"            
+            );
+
+             if (resposta_pergunta_5.equalsIgnoreCase("B")) {
+                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+            } else if (resposta_pergunta_5.equalsIgnoreCase("D")) {
+                System.out.println("\n- Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
+                System.out.println(nome_jogador + "É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
+                System.out.println("Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
+                System.out.println("Pó deixa chefia.");
+            } else {
+                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+            }
+               // Ler observações
+            // Verificar se as respostas estão corretamente para avançar para o próximo
+            // capítulo, se
+            /*
+             * estiverem todas corretas apresentará a mensagem a seguir:
+             * “Parabéns, Alex, suas respostas indicam que você é o candidato perfeito! Seja
+             * Bem-Vindo
+             * a CorpoTech”
+             * // Se o usuário errar algumas das perguntas ao final da entrevista
+             * apresentará a mensagem
+             * a seguir:
+             * “Lamentamos Alex, suas respostas não atendem os critérios da empresa”
+             * // Será mostrado observações do ponto a ser melhorado (Seria como se fosse
+             * uma Dica do
+             * jogo)
+             * “Observação da pergunta 1: “Sua habilidade de trabalho em equipe é um ponto
+             * fraco.”
+             * “Observação da pergunta 2: “Você precisa melhor sua capacidade de lidar com
+             * feedback”
+             * “Observação da pergunta 3: “Sua habilidade de gerenciamento de tempo pode ser
+             * aprimorada”
+             * “Observação da pergunta 4: “Sua capacidade de gerenciamento de conflitos pode
+             * ser uma
+             * preocupação”
+             * “Observação da pergunta 5: “Ser mais disposto a aprender é essencial no nosso
+             * ambiente
+             * de trabalho”
+             * //Apresentar as observações das respostas errada apenas, se ele errar as 5,
+             * apresentar as
+             * cinco observações, se errar 2. apresentar duas observações.
+             * //Após as observações de cada pergunta, perguntar ao jogador se ele:
+             * “Deseja tentar Novamente? Digite “Sim” para tentar novamente, se digitar
+             * “Não”, “Fim de
+             * jogo”
+             * //Se ele digitar “Sim”, perguntar se ele deseja uma Dica/ Observação geral
+             * para fazer a
+             * entrevista novamente, tipo assim:
+             * “Sim” > “Deseja uma Dica para Tentar novamente a entrevista?”
+             * //Se ele digitar “Sim” para a dica apresentar a seguinte mensagem da dica:
+             * “Lembre-se de que a entrevista é uma oportunidade para mostrar suas
+             * habilidades e qualificações”
+             * “O mercado de trabalho valoriza candidatos que podem se adaptar e aprender
+             * com suas
+             * experiências”
+             * // Após a Mensagem/Dica acima ir para as 5 perguntas da entrevista novamente.
+             */
+
+
+
     }
 
     static void capitulo_2() {
