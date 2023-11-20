@@ -10,13 +10,13 @@ public class ProjetoPi {        static String nome_jogador;
         System.out.println("\n..:: A JORNADA DO NOVATO..:: \n"
                 + "Bem-vindo ao RPG \"A Jornada do Novato\"! Neste jogo você deverá decidir o futuro de um jovem indeciso e perdido.\n");
         avancarDialogo();
-        System.out.println("Sem muito rumo ou noção do que deseja, ele se dá de cara com a impiedosa realidade da vida adulta. \n"
-        + "\nSeu pai, cansado de ver que o filho que não tem emprego, finalmente o confronta e o pergunta quando ele \"...vai começar a ajudar com as contas\".\n"
-        + "Mais tarde no mesmo dia, a sua mãe, impacientemente, o diz que lavar a casa e as roupas \"é nada mais que sua obrigação\"\n");
+        System.out.println("Sem rumo ou noção do que deseja, ele se dá de cara com a impiedosa realidade da vida adulta. \n"
+        + "\nSeu pai, cansado de ver que o filho não tem emprego, finalmente o confronta e o pergunta quando ele\n \"...vai começar a ajudar com as contas\".\n"
+        + "Mais tarde no mesmo dia, a sua mãe, impacientemente, o diz que lavar a casa e as roupas\n \"é nada mais que sua obrigação.\"\n");
         avancarDialogo();
         System.out.println("\n\"É... não tem jeito. Preciso arranjar um emprego\".\n"
         + "\nE com essas palavras dá-se ínicio a jornada de um novato no mundo corporativo.\n"
-        + "Seu objetivo agora é se preparar para uma entrevista de emprego, algo que certamente não lhe foi ensinado na escola.\n");
+        + "Seu objetivo agora é se preparar para uma entrevista de emprego, algo que certamente não lhe foi ensinado na \nescola.\n");
         avancarDialogo();
         System.out.println("Restante da história a desenvolver.\n");
         //                + "determinarão o resultado final. Vamos começar!");
@@ -84,15 +84,15 @@ public class ProjetoPi {        static String nome_jogador;
     }
     static void jogo() {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("\nOlá tudo bem? poderia me dizer o seu nome?\n");
+        System.out.println("\nOlá, tudo bem? poderia me dizer o seu nome?\n");
         nome_jogador = entrada.next();
         avancarDialogo();
-        System.out.println("\n" + nome_jogador + " vê-se diante a recepção da empresa \"CorpoTech\". Logo a sua frente está uma funcionária da empresa; ao que tudo indicaria, uma recepcionista.");
-        System.out.println("\n" + nome_jogador + " ouviu má boatos sobre essa tal de CorpoTech. Mas não é como se ele(a) tivesse o benefício da escolha."
+        System.out.println("\n" + nome_jogador + " vê-se diante a recepção da empresa \"CorpoTech\". Logo a sua frente está uma funcionária da empresa; ao que \ntudo indicaria, uma recepcionista.");
+        System.out.println("\n" + nome_jogador + " ouviu maus boatos sobre essa tal de CorpoTech. Mas não é como se ele(a) tivesse o benefício da escolha."
         + "\nE por ter a audácia de não ter nascido sobrinho do gerente, terá de iniciar sua carreira em um degrau mais baixo da hierarquia.\n");
         avancarDialogo();
-        System.out.println("Você: Meu nome é " + nome_jogador + 
-        "\nRecepcionista: Ah sim! claro, " + nome_jogador +"."+ " estão lhe aguardando na sala 18 no 1º Andar\n"
+        System.out.println("Você: Meu nome é " + nome_jogador + "." +
+        "\nRecepcionista: Ah, sim! claro, " + nome_jogador +"."+ " Estão lhe aguardando na sala 18 no 1º Andar.\n"
         + nome_jogador + ": Agradecido.");
         avancarDialogo();
         System.out.println(nome_jogador + " sai em direção à sala onde ocorrerá a sua primeira entrevista de emprego. Boa sorte " +nome_jogador+ "!");
@@ -106,107 +106,107 @@ public class ProjetoPi {        static String nome_jogador;
         Scanner entrada = new Scanner(System.in);
         System.out.println( "\n\n     ..:: CAPITULO 1 ::..         \n" + "\n     A ENTREVISTA DE EMPREGO         \n\n\n");
         System.out.println(nome_jogador + " está diante a sala 18 no 1º Andar.\n"
-        + "Suas pernas trêmulas e mãos frias indicam certa ansiedade\n"
-        + "\n\"Recomponha-se " +nome_jogador+ "!\" não é hora de amarelar. - Pensa " + nome_jogador 
+        + "Suas pernas trêmulas e mãos frias indicam certa ansiedade.\n"
+        + "\n\"Recomponha-se, " +nome_jogador+ "!\" não é hora de amarelar. - Pensa " + nome_jogador 
         + "\nUm suspiro profundo preenche o corredor antes de adentrar na sala."
         + "\nA entrevista está prestes a começar, e cada passo parece uma eternidade."
         );
 
         avancarDialogo();
 
-        System.out.println("\n" + nome_jogador + " entra na sala, deparando-se com um entrevistador sério."
+        System.out.println("\n" + nome_jogador + " entra na sala, deparando-se com uma entrevistadora séria."
             + "\nA atmosfera pesada e a tensão no ar são quase palpáveis."
-            + "\nEntrevistador: Bom dia, " + nome_jogador + ". Por favor, sente-se."
+            + "\nEntrevistadora: Bom dia, " + nome_jogador + ". Por favor, sente-se."
             + "\nO coração acelera, mas é hora de mostrar sua melhor versão.\n");
             System.out.println("*---* Você está prestes a participar de um jogo de múltipla escolha, onde apenas uma das opções é correta. *---*\n"+
             "               Acerte as respostas para passar na entrevista de emprego!\n\n"
             + "Pergunta 1: Como você descreveria suas habilidades de trabalho em equipe?\n"
-            + "\nA - Tenho dificuldade em trabalhar com outras pessoas\n"
-            + "\nB - Eu trabalho bem em equipe e colaboro efetivamente”\n"
-            + "\nC-  Prefiro trabalhar sozinho e evitar equipes\n"
-            + "\nD-  nois trabalha sem câoh tá ligado meu? nois é responsa mano.\n"
+            + "\nA - Tenho dificuldade em trabalhar com outras pessoas.\n"
+            + "\nB - Eu trabalho bem em equipe e colaboro efetivamente.\n"
+            + "\nC - Prefiro trabalhar sozinho e evitar equipes.\n"
+            + "\nD - nois trabalha sem câoh tá ligado meu? nois é responsa mano.\n"
             );
 
             String resposta_pergunta_1 = entrada.next();
             int respostasCorretas = 0;
 
             if (resposta_pergunta_1.equalsIgnoreCase("B")) {
-                System.out.println("\nEntrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
                 respostasCorretas++;
             } else if (resposta_pergunta_1.equalsIgnoreCase("D")) {
-                System.out.println("\nEntrevistador: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
-                System.out.println("\nEntrevistador: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
 
-            System.out.println("Pergunta 2: Como você lida com feedback e críticas construtivas?"
-            + "\nA - Fico defensivo e não gosto de receber feedback"
-            + "\nB - Valorizo feedback e tento melhorar com base nele"
-            + "\nC - Eu não costumo receber feedback porque sou perfeito"
-            + "\nD - É o seguinte meoh eu não gosto de recalque não menor"            
+            System.out.println("\nPergunta 2: Como você lida com feedback e críticas construtivas?\n"
+            + "\nA - Fico defensivo e não gosto de receber feedback.\n"
+            + "\nB - Valorizo feedback e tento melhorar com base nele.\n"
+            + "\nC - Eu não costumo receber feedback porque sou perfeito.\n"
+            + "\nD - É o seguinte meoh eu não gosto de recalque não menor.\n"            
             );
 
             String resposta_pergunta_2 = entrada.next();
             
              if (resposta_pergunta_2.equalsIgnoreCase("B")) {
-                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
                 respostasCorretas++;
             } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
-                System.out.println("\nEntrevistador: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
-                System.out.println("\nEntrevistador: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
 
-            System.out.println("Pergunta 3: Como você prioriza suas tarefas quando tem várias para fazer?"
-            + "\nA - Eu fico sobrecarregado e não sei por onde começar."
-            + "\nB - Eu priorizo tarefas com base em sua importância e prazos."
-            + "\nC - Eu procrastino e deixo tudo para a última hora."
-            + "\nD - \"Nois\" tá sempre no corre sabe como é ne, a vida não perdoa os \"cria.\""            
+            System.out.println("\nPergunta 3: Como você prioriza suas tarefas quando tem várias para fazer?\n"
+            + "\nA - Eu fico sobrecarregado e não sei por onde começar.\n"
+            + "\nB - Eu priorizo tarefas com base em sua importância e prazos.\n"
+            + "\nC - Eu procrastino e deixo tudo para a última hora.\n"
+            + "\nD - \"Nois\" tá sempre no corre sabe como é ne, a vida não perdoa os \"cria.\"\n"            
             );
             
             String resposta_pergunta_3 = entrada.next();
             
              if (resposta_pergunta_3.equalsIgnoreCase("B")) {
-                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
                 respostasCorretas++;
             } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
-                System.out.println("\nEntrevistador: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
-                System.out.println("\nEntrevistador: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
 
-            System.out.println("Pergunta 4: Como você lida com situações de conflito no local de trabalho?"
-            + "\nA - Eu evito conflitos a todo o custo e não me envolvo"
-            + "\nB - Eu tento resolver conflitos de maneira construtiva e comunicativa."
-            + "\nC - Eu geralmente sou a causa dos conflitos."
-            + "\nD - Tem que botar ordem nesses folgado ta ligado?"            
+            System.out.println("\nPergunta 4: Como você lida com situações de conflito no local de trabalho?\n"
+            + "\nA - Eu evito conflitos a todo o custo e não me envolvo.\n"
+            + "\nB - Eu tento resolver conflitos de maneira construtiva e comunicativa.\n"
+            + "\nC - Eu geralmente sou a causa dos conflitos.\n"
+            + "\nD - Tem que botar ordem nesses folgado ta ligado?\n"            
             );
             
             String resposta_pergunta_4 = entrada.next();
 
              if (resposta_pergunta_4.equalsIgnoreCase("B")) {
-                System.out.println("\nEntrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
                 respostasCorretas++;
             } else if (resposta_pergunta_4.equalsIgnoreCase("D")) {
-                System.out.println("\nEntrevistador: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
-                System.out.println("\nEntrevistador:  Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistadora:  Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
             
-            System.out.println("Pergunta 5: Qual é a sua abordagem ao aprender novas habilidades ou tecnologia?"
-            + "\nA - Eu não gosto de aprender coisas novas"
-            + "\nB - Estou disposto a aprender e me manter atualizado."
-            + "\nC - Eu já sei tudo o que é importante."
-            + "\nD - Eu falo com o Dérick"         
+            System.out.println("\nPergunta 5: Qual é a sua abordagem ao aprender novas habilidades ou tecnologia?\n"
+            + "\nA - Eu não gosto de aprender coisas novas.\n"
+            + "\nB - Estou disposto a aprender e me manter atualizado.\n"
+            + "\nC - Eu já sei tudo o que é importante.\n"
+            + "\nD - Eu falo com o Dérick.\n"         
             );
             
             String resposta_pergunta_5 = entrada.next();
 
              if (resposta_pergunta_5.equalsIgnoreCase("B")) {
-                System.out.println("\n-Entrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                System.out.println("\n-Entrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
                 respostasCorretas++;
             } else if (resposta_pergunta_5.equalsIgnoreCase("D")) {
-                System.out.println("\n- Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistadora: Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
                 System.out.println(nome_jogador + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
                 System.out.println("Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
                 System.out.println("Pó deixa chefia.");
@@ -216,14 +216,14 @@ public class ProjetoPi {        static String nome_jogador;
 
             int totalPerguntas = 5;
             if (respostasCorretas == totalPerguntas) {
-                System.out.println("\n"+ nome_jogador + " gostei bastante da sua abordagem as perguntas. Acredito que você se encaixará bem na cultura de nossa empresa. Quer começar semana que vem?"
-                + "A entrevistadora se levanta com um sorriso acolhedor e estende a mão para " + nome_jogador + "\n" 
-                + nome_jogador+ " se levanta, sem sinais de nervosismo e com sua auto-estima revigorada, aperta a mão da entrevistadora e se retira da sala."
+                System.out.println("\n"+ nome_jogador + " gostei bastante da sua abordagem as perguntas. Acredito que você se encaixará bem na cultura de nossa \nempresa. Quer começar semana que vem? "
+                + "A entrevistadora se levanta com um sorriso acolhedor e estende a mão para  " + nome_jogador + ".\n" 
+                + nome_jogador+ " se levanta, sem sinais de nervosismo e com sua auto-estima revigorada, aperta a mão da entrevistadora e se \nretira da sala."
                 + "\nAtrás de si uma porta se fecha. Só o que resta agora é o Jornada em frente."
                 );
                 capitulo_2();
             } else {
-                System.out.println("\nEntrevistador: Obrigado por comparecer. Lhe daremos uma devolutiva após a finalização do processo seletivo. Fique no aguardo!\n");
+                System.out.println("\nEntrevistadora: Obrigado por comparecer. Lhe daremos uma devolutiva após a finalização do processo seletivo. Fique no aguardo!\n");
                 System.out.println("Apesar desta ser a sua primeira entrevista, "+nome_jogador+" sente que eles não irão de fato retornar contato."
                 + "\nIsto não significa, no entando, que acabaram as esperanças. Você pode sempre tentar mais uma vez, e haverá sempre um novo amanhã."
                 + "\n\"...Se você conhece o inimigo e conhece a si mesmo, não precisa temer o resultado de cem batalhas."
@@ -295,13 +295,13 @@ public class ProjetoPi {        static String nome_jogador;
         System.out.println(nome_jogador+ " se viu novamente nos corredores da CorpoTech.\n"
         + "Andando em direção a um corredor que parecia não ter fim, estranhou a falta de pessoas naquele dia."
         + "\n\"Será que é um feriado e eu não tô sabendo?\"\n"
-        + "Estava mais frio que o comum." + nome_jogador + " nunca teve um ar-condicionado em sua vida, seria essa a origem dessa friaca?\n"
-        + "A sensação de estar perdido aumenta a cada porta que ele(a) passa. A distância, é possível avistar uma porta familiar...\n"
-        + "Ao chegar mais perto" + nome_jogador+ "vê que trata-se da infâme sala 18.\n"
-        + "Você: Mas... eu passei na entrevista.. não é?... eu tô ansioso de novo?");
+        + "Estava mais frio que o comum. " + nome_jogador + " nunca teve um ar-condicionado em sua vida, seria essa a origem dessa friaca?\n"
+        + "A sensação de estar perdido aumenta a cada porta que ele(a) passa. À distância, é possível avistar uma porta \nfamiliar...\n"
+        + "Ao chegar mais perto " + nome_jogador+ " vê que trata-se da infâme sala 18.\n"
+        + "Você: Mas... Eu passei na entrevista.. Não é?... E-eu tô ansioso de novo?");
         avancarDialogo();
-        System.out.println("\nUma ventania forte passa por trás dele(a) e abre a porta. No local onde uma vez estava a entrevistadora agora está uma figura escura e misteriosa\n"
-        + "A figura dá uma investida em direção de(a) " +nome_jogador+ " e então..."
+        System.out.println("\nUma ventania forte passa por trás dele(a) e abre a porta. No local onde uma vez estava a entrevistadora agora \nestá uma figura escura e misteriosa\n"
+        + "A figura dá uma investida em direção de " +nome_jogador+ " e então..."
         + "**Plim plim plim!!**\n"
         +"Era o som de seu despertador."
         );
@@ -314,9 +314,9 @@ public class ProjetoPi {        static String nome_jogador;
                 //Opção 2: Pular o café para economizar tempo e chegar cedo ao trabalho.
                 //Ao escolher a opção 1, apresentar a mensagem “Café na mão, Alex enfrenta o dia com energia renovada.”
                 //Ao escolher a opção 2, apresentar a mensagem "Sem café, Alex corre para a CorpoTech,priorizando a pontualidade e mostrando sua dedicação ao novo emprego."
-        System.out.println(nome_jogador + " chega a “CorpoTech” bem antes do horário, cumprimenta a secretária da empresa, que lhe\r\n" + //
-                "informa a sala de treinamento."+ nome_jogador+ " se dirige a sala e aguarda.");
-        System.out.println("No horário o instrutor chega a sala de treinamento, inicia a apresentação, destacando a missão,\r\n" + //
+        System.out.println(nome_jogador + " chega a \"CorpoTech\" bem antes do horário, cumprimenta a secretária da empresa, que lhe\r\n" + //
+                "informa a sala de treinamento. "+ nome_jogador+ " se dirige a sala e aguarda.");
+        System.out.println("No horário, o instrutor chega a sala de treinamento, inicia a apresentação, destacando a missão,\r\n" + //
                 "visão e valores da CorpoTech.\r\n" + //
                 "//Quero que mostre uma pergunta, “Go");
 
