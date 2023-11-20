@@ -306,22 +306,24 @@ public class ProjetoPi {        static String nome_jogador;
         +"Era o som de seu despertador."
         );
         avancarDialogo();
-        System.out.println("Alex acorda em seu apartamento. A luz do sol invade o quarto, destacando a estante de livros e o\r\n" + //
+        System.out.println(nome_jogador +" acorda em seu apartamento. A luz do sol invade o quarto, destacando a estante de livros e o\r\n" + //
                 "diploma recém-conquistado na parede. Ele recebe uma mensagem no telefone informando sobre\r\n" + //
                 "o primeiro dia de treinamento na \"CorpoTech\".");
-                //Para começar bem o seu dia, Alex decide:
+                //Para começar bem o seu dia, nome_jogador decide:
                 //Opção 1: Preparar um café reforçado, querendo enfrentar o dia com energia.
                 //Opção 2: Pular o café para economizar tempo e chegar cedo ao trabalho.
                 //Ao escolher a opção 1, apresentar a mensagem “Café na mão, Alex enfrenta o dia com energia renovada.”
                 //Ao escolher a opção 2, apresentar a mensagem "Sem café, Alex corre para a CorpoTech,priorizando a pontualidade e mostrando sua dedicação ao novo emprego."
-        System.out.println("Alex chega a “CorpoTech” bem antes do horário, cumprimenta a secretária da empresa, que lhe\r\n" + //
-                "informa a sala de treinamento. Alex se dirige a sala e aguarda.");
+        System.out.println(nome_jogador + " chega a “CorpoTech” bem antes do horário, cumprimenta a secretária da empresa, que lhe\r\n" + //
+                "informa a sala de treinamento."+ nome_jogador+ " se dirige a sala e aguarda.");
         System.out.println("No horário o instrutor chega a sala de treinamento, inicia a apresentação, destacando a missão,\r\n" + //
                 "visão e valores da CorpoTech.\r\n" + //
                 "//Quero que mostre uma pergunta, “Go");
 
 
                 // LISTA DE COISAS QUE FALTARAM PRA FAZER NO CAPITULO 2!!!!!!!!!!!!!!
+                //por favor lembrem de trocar Alex para nome_jogador
+                //Se tiver alguma frase com gênero só coloquem ele(a) 
               /*  ///Quero que mostre uma pergunta, “Gostaria de saber a missão, visão e valores da empresa?”, e
                 mostrar as opções SIM e NÃO.
                 //Se o usuário digitar “Sim”, mostrar, está mensagem:
