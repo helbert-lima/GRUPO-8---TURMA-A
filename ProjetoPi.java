@@ -33,7 +33,7 @@ public class ProjetoPi {        static String nome_jogador;
             menu();
         } else {
             System.out.println(
-                    "\nMestre: Mesmo digitando uma opção inválida, seu destino lhe aguarda! Viva muito, explore, venca seus desafios e encontre a cura...");
+                    "\nMestre: Mesmo digitando uma opção inválida, seu destino lhe aguarda! Viva muito, explore, venca seus desafios...");
             menu();
         }
     }
@@ -180,14 +180,14 @@ public class ProjetoPi {        static String nome_jogador;
             );
 
              if (resposta_pergunta_4.equalsIgnoreCase("B")) {
-                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                System.out.println("\nEntrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
             } else if (resposta_pergunta_4.equalsIgnoreCase("D")) {
-                System.out.println("\n- Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistador: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
-                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistador:  Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
 
-            tring resposta_pergunta_5 = entrada.next();
+            string resposta_pergunta_5 = entrada.next();
 
             System.out.println("Pergunta 5: Qual é a sua abordagem ao aprender novas habilidades ou tecnologia?"
             + "\nA - Eu não gosto de aprender coisas novas"
@@ -197,10 +197,10 @@ public class ProjetoPi {        static String nome_jogador;
             );
 
              if (resposta_pergunta_5.equalsIgnoreCase("B")) {
-                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                System.out.println("\n-Entrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
             } else if (resposta_pergunta_5.equalsIgnoreCase("D")) {
                 System.out.println("\n- Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
-                System.out.println(nome_jogador + "É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
+                System.out.println(nome_jogador + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
                 System.out.println("Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
                 System.out.println("Pó deixa chefia.");
             } else {
