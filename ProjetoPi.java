@@ -86,6 +86,7 @@ public class ProjetoPi {        static String nome_jogador;
         Scanner entrada = new Scanner(System.in);
         System.out.println("\nOlá tudo bem? poderia me dizer o seu nome?\n");
         nome_jogador = entrada.next();
+        avancarDialogo();
         System.out.println("\n" + nome_jogador + " vê-se diante a recepção da empresa \"CorpoTech\". Logo a sua frente está uma funcionária da empresa; ao que tudo indicaria, uma recepcionista.");
         System.out.println("\n" + nome_jogador + " ouviu má boatos sobre essa tal de CorpoTech. Mas não é como se ele(a) tivesse o benefício da escolha."
         + "\nE por ter a audácia de não ter nascido sobrinho do gerente, terá de iniciar sua carreira em um degrau mais baixo da hierarquia.\n");
@@ -127,16 +128,18 @@ public class ProjetoPi {        static String nome_jogador;
             );
 
             String resposta_pergunta_1 = entrada.next();
+            int respostasCorretas = 0;
 
             if (resposta_pergunta_1.equalsIgnoreCase("B")) {
-                System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                System.out.println("\nEntrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                respostasCorretas++;
             } else if (resposta_pergunta_1.equalsIgnoreCase("D")) {
-                System.out.println("\n- É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistador: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
-                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistador: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
             
-            string resposta_pergunta_2 = entrada.next();
+            String resposta_pergunta_2 = entrada.next();
 
             System.out.println("Pergunta 2: Como você lida com feedback e críticas construtivas?"
             + "\nA - Fico defensivo e não gosto de receber feedback"
@@ -147,13 +150,14 @@ public class ProjetoPi {        static String nome_jogador;
 
              if (resposta_pergunta_2.equalsIgnoreCase("B")) {
                 System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                respostasCorretas++;
             } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
-                System.out.println("\n- Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistador: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
-                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistador: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
             
-            string resposta_pergunta_3 = entrada.next();
+            String resposta_pergunta_3 = entrada.next();
 
             System.out.println("Pergunta 3: Como você prioriza suas tarefas quando tem várias para fazer?"
             + "\nA - Eu fico sobrecarregado e não sei por onde começar."
@@ -164,13 +168,14 @@ public class ProjetoPi {        static String nome_jogador;
 
              if (resposta_pergunta_3.equalsIgnoreCase("B")) {
                 System.out.println("\n- Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                respostasCorretas++;
             } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
-                System.out.println("\n- Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+                System.out.println("\nEntrevistador: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
-                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistador: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
 
-            string resposta_pergunta_4 = entrada.next();
+            String resposta_pergunta_4 = entrada.next();
 
             System.out.println("Pergunta 4: Como você lida com situações de conflito no local de trabalho?"
             + "\nA - Eu evito conflitos a todo o custo e não me envolvo"
@@ -181,13 +186,14 @@ public class ProjetoPi {        static String nome_jogador;
 
              if (resposta_pergunta_4.equalsIgnoreCase("B")) {
                 System.out.println("\nEntrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                respostasCorretas++;
             } else if (resposta_pergunta_4.equalsIgnoreCase("D")) {
                 System.out.println("\nEntrevistador: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
             } else {
                 System.out.println("\nEntrevistador:  Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
             }
 
-            string resposta_pergunta_5 = entrada.next();
+            String resposta_pergunta_5 = entrada.next();
 
             System.out.println("Pergunta 5: Qual é a sua abordagem ao aprender novas habilidades ou tecnologia?"
             + "\nA - Eu não gosto de aprender coisas novas"
@@ -198,14 +204,40 @@ public class ProjetoPi {        static String nome_jogador;
 
              if (resposta_pergunta_5.equalsIgnoreCase("B")) {
                 System.out.println("\n-Entrevistador: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                respostasCorretas++;
             } else if (resposta_pergunta_5.equalsIgnoreCase("D")) {
                 System.out.println("\n- Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
                 System.out.println(nome_jogador + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
                 System.out.println("Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
                 System.out.println("Pó deixa chefia.");
             } else {
-                System.out.println("\n- Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
             }
+
+            int totalPerguntas = 5;
+            if (respostasCorretas == totalPerguntas) {
+                System.out.println("\n"+ nome_jogador + " gostei bastante da sua abordagem as perguntas. Acredito que você se encaixará bem na cultura de nossa empresa. Quer começar semana que vem?"
+                + "A entrevistadora se levanta com um sorriso acolhedor e estende a mão para " + nome_jogador + "\n" 
+                + nome_jogador+ " se levanta, sem sinais de nervosismo e com sua auto-estima revigorada, aperta a mão da entrevistadora e se retira da sala."
+                + "\nAtrás de si uma porta se fecha. Só o que resta agora é o Jornada em frente."
+                );
+                capitulo_2();
+            } else {
+                System.out.println("\nEntrevistador: Obrigado por comparecer. Lhe daremos uma devolutiva após a finalização do processo seletivo. Fique no aguardo!\n");
+                System.out.println("Apesar desta ser a sua primeira entrevista, "+nome_jogador+" sente que eles não irão de fato retornar contato."
+                + "\nIsto não significa, no entando, que acabaram as esperanças. Você pode sempre tentar mais uma vez, e haverá sempre um novo amanhã."
+                + "\n\"...Se você conhece o inimigo e conhece a si mesmo, não precisa temer o resultado de cem batalhas."
+                + "\nSe você se conhece mas não conhece o inimigo, para cada vitória ganha sofrerá também uma derrota.\n"
+                + "Se você não conhece nem o inimigo nem a si mesmo, perderá todas as batalhas...\""
+                + "                                      \n                                                   Sun Tzu - A Arte da Guerra\n\n\n"
+                );              
+            }
+        }
+            
+
+            // LISTA DE COISAS QUE FALTARAM PRA FAZER NO CAPITULO 1!!!!!!!!!!!!!!
+            
+    
                // Ler observações
             // Verificar se as respostas estão corretamente para avançar para o próximo
             // capítulo, se
@@ -255,14 +287,105 @@ public class ProjetoPi {        static String nome_jogador;
 
 
 
-    }
+    
 
     static void capitulo_2() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println( "\n\n     ..:: CAPITULO 2 ::..         \n" + "\n     OS ANSEIOS DOS RECURSOS HUMANOS         \n\n\n");
+        System.out.println(nome_jogador+ " se viu novamente nos corredores da CorpoTech.\n"
+        + "Andando em direção a um corredor que parecia não ter fim, estranhou a falta de pessoas naquele dia."
+        + "\n\"Será que é um feriado e eu não tô sabendo?\"\n"
+        + "Estava mais frio que o comum." + nome_jogador + " nunca teve um ar-condicionado em sua vida, seria essa a origem dessa friaca?\n"
+        + "A sensação de estar perdido aumenta a cada porta que ele(a) passa. A distância, é possível avistar uma porta familiar...\n"
+        + "Ao chegar mais perto" + nome_jogador+ "vê que trata-se da infâme sala 18.\n"
+        + "Você: Mas... eu passei na entrevista.. não é?... eu tô ansioso de novo?");
+        avancarDialogo();
+        System.out.println("\nUma ventania forte passa por trás dele(a) e abre a porta. No local onde uma vez estava a entrevistadora agora está uma figura escura e misteriosa\n"
+        + "A figura dá uma investida em direção de(a) " +nome_jogador+ " e então..."
+        + "**Plim plim plim!!**\n"
+        +"Era o som de seu despertador."
+        );
+        avancarDialogo();
+        System.out.println("Alex acorda em seu apartamento. A luz do sol invade o quarto, destacando a estante de livros e o\r\n" + //
+                "diploma recém-conquistado na parede. Ele recebe uma mensagem no telefone informando sobre\r\n" + //
+                "o primeiro dia de treinamento na \"CorpoTech\".");
+                //Para começar bem o seu dia, Alex decide:
+                //Opção 1: Preparar um café reforçado, querendo enfrentar o dia com energia.
+                //Opção 2: Pular o café para economizar tempo e chegar cedo ao trabalho.
+                //Ao escolher a opção 1, apresentar a mensagem “Café na mão, Alex enfrenta o dia com energia renovada.”
+                //Ao escolher a opção 2, apresentar a mensagem "Sem café, Alex corre para a CorpoTech,priorizando a pontualidade e mostrando sua dedicação ao novo emprego."
+        System.out.println("Alex chega a “CorpoTech” bem antes do horário, cumprimenta a secretária da empresa, que lhe\r\n" + //
+                "informa a sala de treinamento. Alex se dirige a sala e aguarda.");
+        System.out.println("No horário o instrutor chega a sala de treinamento, inicia a apresentação, destacando a missão,\r\n" + //
+                "visão e valores da CorpoTech.\r\n" + //
+                "//Quero que mostre uma pergunta, “Go");
+
+
+                // LISTA DE COISAS QUE FALTARAM PRA FAZER NO CAPITULO 2!!!!!!!!!!!!!!
+              /*  ///Quero que mostre uma pergunta, “Gostaria de saber a missão, visão e valores da empresa?”, e
+                mostrar as opções SIM e NÃO.
+                //Se o usuário digitar “Sim”, mostrar, está mensagem:
+                Missão da CorpoTech: Potencializar talentos, impulsionando o crescimento profissional e pessoal
+                dos nossos colaboradores.
+                Visão da CorpoTech: Ser referência em inovação e excelência, criando um ambiente onde o
+                sucesso individual contribui para o sucesso coletivo.
+                Valores da CorpoTech:
+                Inovação: Buscamos constantemente soluções criativas para desafios corporativos.
+                Crescimento: Investimos no desenvolvimento contínuo de nossos colaboradores.
+                Colaboração: Valorizamos a diversidade e promovemos um ambiente de trabalho colaborativo.
+                Ética: Atuamos com integridade, transparência e responsabilidade.
+                Respeito: Cultivamos um ambiente onde o respeito e a empatia são fundamentais.
+                Sustentabilidade: Comprometemo-nos com práticas empresariais sustentáveis para um futuro
+                melhor.
+                // Apos mostrar a mensagem acima, da opção “Sim”, seguir o roteiro abaixo:
+                //Se o usuário digitar “Não”, seguir o roteiro abaixo.
+                Os recém-contratados começam a entender a importância de adquirir estratégias valiosas para
+                enfrentar desafios corporativos e desenvolver habilidades de relações humanas. Alex: */
+              /*
+               * Opção 1: Participa ativamente, focando em estratégias que fortaleçam suas
+               * habilidades
+               * interpessoais.
+               * Opção 2: Adota uma postura mais reservada, observador e atento a tudo o que o
+               * instrutor tem a
+               * passar, para assim decidir fazer uma melhor uma abordagem.
+               * // Ao escolher a opção 1, mostrar a mensagem "Ao participar ativamente, Alex
+               * destaca suas
+               * habilidades sociais, o que pode impactar suas relações na empresa”
+               * // Ao escolher a opção 2, mostrar a mensagem “A escolha mais reservada sugere
+               * uma abordagem
+               * cautelosa, possivelmente refletindo um mecanismo de defesa."
+               */
+              /* Escritório de Alex – Tarde
+              Após o treinamento, Alex recebe sua primeira avaliação de desempenho. O jogador tem a opção
+              de escolher como Alex reage a críticas e sugestões.
+              Opção 1: Alex aceita as críticas de maneira diplomática, tentando se adaptar às expectativas da
+              empresa.
+              Opção 2: Alex expressa desacordo com algumas avaliações, defendendo sua abordagem única e
+              suas qualidades individuais.
+              // Se o jogador escolher a opção 1, apresentar a mensagem “A busca por vantagens colaborativas
+              destaca a abertura de Alex para feedback, influenciando nas relações de trabalho.”
+              // Se o jogador escolher a opção 2, apresentar a mensagem “A escolha de desacordo que reforça
+              mais a autoconfiança pode proteger emocionalmente Alex, mas também afetar sua adaptabilidade."
+              Apartamento de Alex – Noite
+              Alex retorna para casa, refletindo sobre o dia. Ele recebe mensagens automáticas da CorpoTech
+              lembrando-o de prazos e regras. Alex:
+              Opção 1: Decide seguir as orientações à risca, evitando qualquer confronto com a empresa.
+              Opção 2: Alex questiona internamente se vale a pena sacrificar sua individualidade em prol do
+              sucesso corporativo.
+              // Fim do Capítulo 2: As escolhas estratégicas do jogador afetam não apenas a narrativa, mas
+              também moldam o desenvolvimento de vantagens relacionadas a relações humanas, mecanismos
+              de defesa e posicionamento profissional. O sistema de vidas adiciona um elemento estratégico,
+              incentivando escolhas que equilibrem a adaptação à cultura corporativa e a preservação da
+              individualidade de Alex. O desfecho final é moldado pelas escolhas do jogador, oferecendo
+              diferentes resultados com base nas estratégias adotadas.
+              Essas sugestões são apenas direcionamentos gerais, e a beleza do jogo está na variedade de
+              escolhas que os jogadores podem fazer para moldar a história de acordo com suas preferências. */
 
     }
 
     static void capitulo_3() {
-
+        System.out.println( "\n\n     ..:: CAPITULO 3 ::..         \n" + "\n     O DESPERTAR         \n\n\n");
+        Scanner entrada = new Scanner(System.in);
     }
 
     static void capitulo_4() {
