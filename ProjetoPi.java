@@ -108,25 +108,25 @@ public class ProjetoPi {        static String nome_jogador;
         + "Suas pernas trêmulas e mãos frias indicam certa ansiedade\n"
         + "\n\"Recomponha-se " +nome_jogador+ "!\" não é hora de amarelar. - Pensa " + nome_jogador 
         + "\nUm suspiro profundo preenche o corredor antes de adentrar na sala."
-        + "\nA entrevista está prestes a começar, e cada passo parece uma eternidade."
-        );
-
+        + "\nA entrevista está prestes a começar, e cada passo parece uma eternidade.");
         avancarDialogo();
 
         int respostasCorretas = 0;
-        String resposta_pergunta_1 = entrada.next();
-        System.out.println("\n" + nome_jogador + " entra na sala, deparando-se com um entrevistador sério."
+        
+            System.out.println("\n" + nome_jogador + " entra na sala, deparando-se com um entrevistador sério."
             + "\nA atmosfera pesada e a tensão no ar são quase palpáveis."
             + "\nEntrevistador: Bom dia, " + nome_jogador + ". Por favor, sente-se."
             + "\nO coração acelera, mas é hora de mostrar sua melhor versão.\n");
             System.out.println("*---* Você está prestes a participar de um jogo de múltipla escolha, onde apenas uma das opções é correta. *---*\n"+
-            "               Acerte as respostas para passar na entrevista de emprego!\n\n"
-            + "Pergunta 1: Como você descreveria suas habilidades de trabalho em equipe?\n"
+            "               Acerte as respostas para passar na entrevista de emprego!\n\n");
+            
+            System.out.println("Pergunta 1: Como você descreveria suas habilidades de trabalho em equipe?\n"
             + "\nA - Tenho dificuldade em trabalhar com outras pessoas\n"
             + "\nB - Eu trabalho bem em equipe e colaboro efetivamente\n"
             + "\nC-  Prefiro trabalhar sozinho e evitar equipes\n"
             + "\nD-  nois trabalha sem câoh tá ligado meu? nois é responsa mano.\n"
-            );
+            ); String resposta_pergunta_1 = entrada.next();
+            
 
             
             
@@ -308,9 +308,8 @@ public class ProjetoPi {        static String nome_jogador;
         System.out.println("\nUma ventania forte passa por trás dele(a) e abre a porta. No local onde uma vez estava a entrevistadora agora está uma figura escura e misteriosa\n"
         + "A figura olha nos olhos de" + nome_jogador+ " e dá uma investida em direção de(a) " +nome_jogador+ " e então..."
         + "**Plim plim plim!!**\n"
-        +"Era o som de seu despertador."
-        );
-        avancarDialogo();
+        +"Era o som de seu despertador.");
+ 
         System.out.println("Alex acorda em seu apartamento. \nA luz do sol invade o quarto, destacando a estante de livros e o\r\n" + //
                 "diploma recém-conquistado na parede. \nEle recebe uma mensagem no telefone informando sobre\r\n" + //
                 "o primeiro dia de treinamento na \"CorpoTech\".");
