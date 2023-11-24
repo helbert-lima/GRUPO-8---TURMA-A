@@ -66,7 +66,7 @@ public class ProjetoPi {
         System.out.println("\n..:: A JORNADA DO NOVATO - Capítulos da História ::..");
         do {
             System.out.println(
-                    "\n\n1 - A 1º entrevista de emprego\n2 - Os Anseios dos Recursos humanos\n3 - O Despertar!\n4 - Voltar");
+                    "\n\n1 - A 1º entrevista de emprego\n2 - Os Anseios dos Recursos humanos\n3 - O Despertar!\n4 - Voltar\n5 - A Revolução Corporativa");
             escolha_capitulo = entrada.nextInt();
             if (escolha_capitulo == 1) {
                 capitulo_1();
@@ -76,6 +76,8 @@ public class ProjetoPi {
                 capitulo_3();
             } else if (escolha_capitulo == 4) {
                 capitulo_4();
+            } else if (escolha_capitulo == 5) {
+                capitulo_5();
             } else {
                 System.out.println("\nOpção inválida, digite novamente: ");
             }
@@ -393,8 +395,6 @@ public class ProjetoPi {
                 "\nOpção 1: Participa ativamente, focando em estratégias que fortaleçam suas habilidades interpessoais."
                         + "\n\nOpção 2: Adota uma postura mais reservada, observador e atento a tudo o que o instrutor tem a passar, \npara assim decidir fazer uma melhor uma abordagem.");
 
-        avancarDialogo();
-
         int escolha_comportamento = entrada.nextInt();
 
         if (escolha_comportamento == 1) {
@@ -437,9 +437,9 @@ public class ProjetoPi {
                     "A busca por vantagens colaborativas destaca a abertura de " + nome_jogador + " para feedbacks,"
                             + " influenciando nas relações de trabalho.");
         } else {
-            System.out.println(
-                    "A escolha de desacordo que reforça mais a autoconfiança pode proteger emocionalmente Alex,"
-                            + " \nmas também afetar sua adaptabilidade.");
+            System.out.printf(
+                    "A escolha de desacordo que reforça mais a autoconfiança pode proteger emocionalmente %s,"
+                            + " \nmas também afetar sua adaptabilidade.", nome_jogador);
         }
 
         avancarDialogo();
@@ -460,28 +460,11 @@ public class ProjetoPi {
 
         if (escolha_comportamento3 == 1) {
             System.out.println("\n" + nome_jogador + ": Bom, é hora de dormir.");
+            capitulo_3();
         } else if (escolha_comportamento3 == 2) {
             System.out.println("\n" + nome_jogador + ": Tsc. Que saco.");
+            capitulo_3();
         }
-
-        /*
-         * // Fim do Capítulo 2: As escolhas estratégicas do jogador afetam não apenas a
-         * narrativa, mas
-         * também moldam o desenvolvimento de vantagens relacionadas a relações humanas,
-         * mecanismos
-         * de defesa e posicionamento profissional. O sistema de vidas adiciona um
-         * elemento estratégico,
-         * incentivando escolhas que equilibrem a adaptação à cultura corporativa e a
-         * preservação da
-         * individualidade de Alex. O desfecho final é moldado pelas escolhas do
-         * jogador, oferecendo
-         * diferentes resultados com base nas estratégias adotadas.
-         * Essas sugestões são apenas direcionamentos gerais, e a beleza do jogo está na
-         * variedade de
-         * escolhas que os jogadores podem fazer para moldar a história de acordo com
-         * suas preferências.
-         */
-
     }
 
     static void capitulo_3() {
@@ -580,6 +563,120 @@ public class ProjetoPi {
 
     static void capitulo_4() {
 
+    }
+
+    static void capitulo_5() {
+        System.out
+                .println("\n\n     ..:: CAPITULO 5 ::..         \n" + "\n     A REVOLUÇÃO CORPORATIVA         \n\n\n");
+        Scanner entrada = new Scanner(System.in);
+
+        System.out
+                .println("Mesmo após ter assumido um cargo de liderança e tentado diversas vezes implementar melhorias "
+                        + "na empresa\nCorpoTech, o pessoal da alta gerência vem ignorando o seu trabalho, "
+                        + nome_jogador
+                        + " viu que a empresa \nnão estava respeitando a missão, visão e valores que lhe foi apresentado no dia da entrevista. ");
+
+        avancarDialogo();
+
+        System.out.println(nome_jogador
+                + ": Não sei mais o que faço para poderem me escutar, e verem que minhas propostas \nsão para o bem da empresa.");
+
+        avancarDialogo();
+
+        System.out.printf("------------------------No Escritório de %s - Tarde ------------------------\n\n\n",
+                nome_jogador);
+
+        System.out.printf(
+                " O escritório de %s estava agora imerso em murmúrios, conversas sussurradas e a expectativa de mudanças.\n"
+                        + " %s estava determinado a liderar uma revolta silenciosa contra as práticas degradantes da CorpoTech.\n"
+                        + " Ele reuniu sua equipe para discutir estratégias.\n\n",
+                nome_jogador, nome_jogador);
+
+        avancarDialogo();
+
+        System.out.printf(
+                "%s: Precisamos agir com inteligência. O que sugerem para iniciar essa revolução silenciosa? ",
+                nome_jogador);
+
+        System.out.println(
+                "\n\n1 - Divulgar publicamente as práticas da empresa. \n2 - Iniciar conversas individuais com funcionários. ");
+
+        int escolha_opção_1 = entrada.nextInt();
+
+        if (escolha_opção_1 == 1) {
+            System.out.println("Tem certeza? Ok...");
+        } else if (escolha_opção_1 == 2) {
+            System.out.println(nome_jogador + ": opta por uma abordagem individualizada, "
+                    + "decidindo iniciar conversas profundas com os funcionários \npara entender melhor suas preocupações.");
+        }
+
+        avancarDialogo();
+
+        System.out.println(nome_jogador + ": A força está na colaboração. "
+                + "Como podemos abordar as preocupações dos funcionários de maneira mais eficaz?");
+
+        System.out.println("\n\n1 - Ignorar as preocupações e implementar mudanças rápidas."
+                + "\n2 - Demonstrar empatia e oferecer soluções específicas.");
+
+        int escolha_opção_2 = entrada.nextInt();
+
+        if (escolha_opção_2 == 1) {
+            System.out.println("");
+        } else if (escolha_opção_2 == 2) {
+            System.out.printf("\nCom base nas conversas individuais, %s planeja implementar mudanças graduais na CorpoTech.", nome_jogador);
+        }
+
+        avancarDialogo();
+
+        System.out.println(nome_jogador + ": Precisamos ser estratégicos. Que tipo de mudanças graduais podem impactar positivamente \na cultura da empresa?");
+        System.out.println("\n\n1 - Implementar um novo sistema de avaliação de desempenho.\n" 
+        + "2 - Introduzir políticas de flexibilidade no trabalho.");
+
+        int escolha_opção_3 = entrada.nextInt();
+
+        if (escolha_opção_3 == 1 || escolha_opção_3 == 2) {
+            System.out.printf("\nÀ medida que as mudanças são implementadas, %s encontra resistência de alguns membros da alta gerência\n\n", nome_jogador);
+        } else {
+            System.out.printf("Digite uma opção válida");
+        }
+
+        avancarDialogo();
+
+        System.out.println("Membro da Alta Gerência: Você está comprometendo a eficiência da empresa. Isso terá consequências.\n\n\n");
+        System.out.printf("%s: Precisamos lidar com as consequências de maneira ética. Como podemos fazer isso?"
+        + "\n\n1 - Ignorar as consequências em prol da moral da equipe." + "\n2 - Buscar soluções que equilibrem eficiência e bem-estar dos funcionários.\n\n", nome_jogador);
+
+        int escolha_opção_4 = entrada.nextInt();
+
+        if (escolha_opção_4 == 1) {
+            System.out.printf("\nÀ principio parece ser a rota mais fácil, mas o futuro traz consequências...", nome_jogador);
+        } else if (escolha_opção_4 == 2) {
+            System.out.printf("Você é capaz de motivar a equipe, ao mesmo tempo em que transmite segurança aos membros da Alta Gerência.");
+        } else {
+            System.out.println("Opção inválida.");
+        }
+
+        avancarDialogo();
+
+        System.out.println(nome_jogador + ": O que construímos aqui é mais do que uma revolução corporativa.\n" 
+        + "É uma lição sobre equilibrar as necessidades corporativas com valores éticos.\nComo essa história vai terminar, depende de nós.");
+
+
+        /*
+         * Mesmo após ter assumido o cargo de liderança e tentado diversas vezes
+         * implementado melhorias
+         * na empresa “CorpoTech”, o pessoal da alta gerência vem ignorando o seu
+         * trabalho, (Nome do
+         * usuário) viu que a empresa não estava respeitando a missão, visão e valores
+         * que lhe foi
+         * apresentado no dia da entrevista.
+         * 
+         * O escritório de (Nome do usuário) estava agora imerso em murmúrios, conversas
+         * sussurradas e a expectativa de mudanças. Alex estava determinado a liderar
+         * uma revolta silenciosa contra as práticas degradantes da CorpoTech. Ele
+         * reuniu sua equipe para discutir estratégias.
+         * 
+         */
     }
 
     static void creditos() {
