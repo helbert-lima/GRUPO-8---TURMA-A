@@ -501,7 +501,7 @@ public class ProjetoPi {
         int respostasCorretas_cap_3 = 0;
 
         if (resposta_pergunta_1_cap_3.equalsIgnoreCase("A")) {
-            System.out.println("\nConcordo plenamente!");
+            System.out.println("\nColega: Concordo plenamente!");
             respostasCorretas_cap_3++;
 
         } else  {
@@ -519,14 +519,14 @@ public class ProjetoPi {
 
         String resposta_pergunta_2_cap_3 = entrada.next();
         if (resposta_pergunta_2_cap_3.equalsIgnoreCase("A")) {
-            System.out.println("\nConcordo plenamente!");
+            System.out.println("\nColega: Concordo plenamente!");
             respostasCorretas_cap_3++;
 
         } else  {
             System.out.println("\nColega: Isso não me parece ser sensato......");
         }
 
-        System.out.println("Quais métodos são utilizados para gerenciar o tempo e priorizar tarefas?\r\n" + //
+        System.out.println("Pergunta 3- Quais métodos são utilizados para gerenciar o tempo e priorizar tarefas?\r\n" + //
                 "\r\n" + //
                 "A) Matriz de Eisenhower (Tabela de Prioridades)\r\n" + //
                 "B) Método da aleatoriedade\r\n" + //
