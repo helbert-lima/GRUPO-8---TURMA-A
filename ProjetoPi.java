@@ -559,7 +559,7 @@ public class ProjetoPi {
             System.out.println("\nColega: Isso não me parece ser sensato......");
         }
         int totalPerguntas_cap3 = 3;
-        if (respostasCorretas == totalPerguntas) {
+        if (respostasCorretas_cap_3 == totalPerguntas_cap3) {
             System.out.println("\n" + nome_jogador
                     + nome_jogador
                     + " aborda seu superior e lhe apresenta um relatório elaborado com métodos que visam melhorar as condições de trabalho de seu setor"
