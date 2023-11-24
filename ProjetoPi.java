@@ -66,7 +66,7 @@ public class ProjetoPi {
         System.out.println("\n..:: A JORNADA DO NOVATO - Capítulos da História ::..");
         do {
             System.out.println(
-                    "\n\n1 - A 1º entrevista de emprego\n2 - Os Anseios dos Recursos humanos\n3 - O Despertar!\n4 - Voltar\n5 - A Revolução Corporativa");
+                    "\n\n1 - A 1º entrevista de emprego\n2 - Os Anseios dos Recursos humanos\n3 - O Despertar!\n4 - Liderança e Mudança\n5 - A Revolução Corporativa");
             escolha_capitulo = entrada.nextInt();
             if (escolha_capitulo == 1) {
                 capitulo_1();
@@ -474,12 +474,12 @@ public class ProjetoPi {
         " é um(a) trabalhador(a) exemplar.\n" 
         + " todo o seu esforço não é em vão, claro. Seus superiores rapidamente percebem o seu alto nível de dedicação, e logo decidem lhe recompensar...\n"
         + "\n...com mais tarefas.\n"
-        + nome_jogador + "  \nestá designado a um projeto com prazos irrealistas e uma carga de trabalho esmagadora. Ele se sente pressionado para cumprir todas as demandas.\n"
+        + nome_jogador + " está designado a um projeto com prazos irrealistas e uma carga de trabalho esmagadora. Ele se sente pressionado para cumprir todas as demandas.\n"
         + "\"Isso não é certo... mas bem, fazer o quê.\" - pensa " + nome_jogador
         + "\nAlguns dias se passam, e as cobranças excessivas parecem ter se tornado o novo normal.\n"
         + nome_jogador + " tenta discutir a carga de trabalho excessiva com seu superior, mas é recebido com desdém.\n"
-        + "Superior: Você é novo aqui, Alex. Precisa mostrar seu comprometimento com a empresa."
-        + nome_jogador + ":Entendo, mas essas expectativas são realmente alcançáveis?\n"
+        + "Superior: Você é novo aqui, "+nome_jogador+". Precisa mostrar seu comprometimento com a empresa. \n"
+        + nome_jogador + ": Entendo, mas essas expectativas são realmente alcançáveis?\n"
         + "\nSuperior: Todos conseguem, é só questão de esforço. Não quero desculpas, quero resultados.\n");
         avancarDialogo();
         System.out.println("O superior então vira as costas e sai andando tranquilamente em direção ao seu computador, onde aparenta estar vigiando minuciosamente o progresso de seu projeto.\n"
@@ -501,7 +501,7 @@ public class ProjetoPi {
         int respostasCorretas_cap_3 = 0;
 
         if (resposta_pergunta_1_cap_3.equalsIgnoreCase("A")) {
-            System.out.println("\nColega: Concordo plenamente!");
+            System.out.println("\nConcordo plenamente!");
             respostasCorretas_cap_3++;
 
         } else  {
@@ -526,7 +526,7 @@ public class ProjetoPi {
             System.out.println("\nColega: Isso não me parece ser sensato......");
         }
 
-        System.out.println("Pergunta 3- Quais métodos são utilizados para gerenciar o tempo e priorizar tarefas?\r\n" + //
+        System.out.println("Pergunta 3 - Quais métodos são utilizados para gerenciar o tempo e priorizar tarefas?\r\n" + //
                 "\r\n" + //
                 "A) Matriz de Eisenhower (Tabela de Prioridades)\r\n" + //
                 "B) Método da aleatoriedade\r\n" + //
@@ -535,7 +535,7 @@ public class ProjetoPi {
 
         String resposta_pergunta_3_cap_3 = entrada.next();
         if (resposta_pergunta_3_cap_3.equalsIgnoreCase("A")) {
-            System.out.println("\nConcordo plenamente!");
+            System.out.println("\nColega: Concordo plenamente!");
             respostasCorretas_cap_3++;
 
         } else {
@@ -562,42 +562,36 @@ public class ProjetoPi {
     
 
     static void capitulo_4() {
-
+    	System.out.println("\n\n     ..:: CAPITULO 4 ::..         \n" + "\n     LIDERANÇA E MUDANÇA         \n\n\n");
         Scanner scanner = new Scanner(System.in);
 
-        // Introdução
-        System.out.println("Capítulo 4: Liderança e Mudança\n");
-
-        // Solicitar o nome do usuário
-        System.out.print("Por favor, insira seu nome: ");
-        String nomeUsuario = scanner.nextLine();
-
-        System.out.println(nomeUsuario + ", agora em um papel de liderança, enfrenta o desafio de transformar a cultura da CorpoTech para melhorar o bem-estar dos funcionários enquanto mantém a eficiência da empresa. Ele reconhece a necessidade de aplicar os princípios aprendidos em administração para liderar essa mudança.");
+        
+        System.out.println(nome_jogador + ", agora em um papel de liderança, enfrenta o desafio de transformar a cultura da CorpoTech para melhorar "
+        		+ "\no bem-estar dos funcionários enquanto mantém a eficiência da empresa. Ele reconhece a necessidade de aplicar os princípios "
+        		+ "\naprendidos em administração para liderar essa mudança.");
         pressEnter(scanner);
 
         // Escritório de (Nome do usuário) - Tarde
-        System.out.println("----------------------- Escritório de " + nomeUsuario + " - Tarde -----------------");
-        System.out.println(nomeUsuario + " se encontrava em seu novo escritório, encarando a vastidão do desafio que tinha pela frente. Sua promoção a um cargo de liderança na CorpoTech não era apenas um avanço na carreira, mas também uma oportunidade de moldar a cultura da empresa.");
-        pressEnter(scanner);
-
-        // Escritório de (Nome do usuário) - Tarde
-        System.out.println("----------------------- Escritório de " + nomeUsuario + " - Tarde -----------------");
-        System.out.println(nomeUsuario +  " se encontrava em seu novo escritório, encarando a vastidão do desafio que tinha pela frente. Sua promoção a um cargo de liderança na CorpoTech não era apenas um avanço na carreira, mas também uma oportunidade de moldar a cultura da empresa.");
+        System.out.println("----------------------- Escritório de " + nome_jogador + " - Tarde -----------------");
+        System.out.println(nome_jogador + " se encontrava em seu novo escritório, encarando a vastidão do desafio que tinha pela frente. Sua promoção "
+        		+ "\na um cargo de liderança na CorpoTech não era apenas um avanço na carreira, mas também uma oportunidade de moldar a cultura da empresa.");
         pressEnter(scanner);
 
         // Refletindo sobre a tarefa
-        System.out.println(nomeUsuario + " reflete sobre a enormidade da tarefa à sua frente e compartilha seus pensamentos com um colega.");
-        System.out.println(nomeUsuario + ": \"Estou prestes a liderar uma transformação aqui. Preciso aplicar o que aprendi sobre administração para fazer isso direito.\"");
+        System.out.println(nome_jogador + " reflete sobre a enormidade da tarefa à sua frente e compartilha seus pensamentos com um colega.");
+        System.out.println(nome_jogador + ": \"Estou prestes a liderar uma transformação aqui. Preciso aplicar o que aprendi sobre administração "
+        		+ "\npara fazer isso direito.\"");
         pressEnter(scanner);
 
         // Pergunta 1
-        System.out.println("\nO que " + nomeUsuario + " deve priorizar ao liderar uma transformação organizacional?\n" +
+        System.out.println("\nO que " + nome_jogador + " deve priorizar ao liderar uma transformação organizacional?\n" +
                 "Opção A: Apenas as necessidades imediatas da empresa.\n" +
                 "Opção B: Um equilíbrio entre as necessidades da empresa e o bem-estar dos funcionários.\n" +
                 "Opção C: A satisfação pessoal dos líderes.");
         char resposta1 = getUserInput(scanner);
         if (resposta1 == 'A' || resposta1 == 'C') {
-            System.out.println("\n\"Priorizar apenas as necessidades imediatas da empresa pode negligenciar o impacto nas pessoas, e a satisfação pessoal dos líderes pode não refletir nas necessidades organizacionais ou dos funcionários.\"");
+            System.out.println("\n\"Priorizar apenas as necessidades imediatas da empresa pode negligenciar o impacto nas pessoas, e a satisfação pessoal "
+            		+ "\ndos líderes pode não refletir nas necessidades organizacionais ou dos funcionários.\"");
             pressEnter(scanner);
             // Aqui você iria para a próxima pergunta
         } else if (resposta1 == 'B') {
@@ -605,9 +599,9 @@ public class ProjetoPi {
             // Continuação da história
         }
         // Pergunta 2
-       System.out.println(nomeUsuario + " decide analisar as tarefas da equipe em busca de eficiência. Um colega pergunta sobre a abordagem.");
+       System.out.println(nome_jogador + " decide analisar as tarefas da equipe em busca de eficiência. Um colega pergunta sobre a abordagem.");
        System.out.println("Colega: \"Você está seguindo a Administração Científica. Isso não vai prejudicar a moral dos trabalhadores?\"");
-      System.out.println(nomeUsuario + ": Preciso equilibrar eficiência com o bem-estar. Como podemos fazer isso?\"");
+      System.out.println(nome_jogador + ": Preciso equilibrar eficiência com o bem-estar. Como podemos fazer isso?\"");
        pressEnter(scanner);
 
        System.out.println("\nQual abordagem de liderança compatível com a Administração Científica poderia minimizar impactos negativos na moral dos trabalhadores?\n" +
@@ -616,7 +610,8 @@ public class ProjetoPi {
         "Opção C: Ignorar completamente os princípios da Administração Científica.");
        char resposta2 = getUserInput(scanner);
        if (resposta2 == 'A' || resposta2 == 'C') {
-       System.out.println("\n\"Desconsiderar as preocupações dos trabalhadores pode levar à resistência, e ignorar completamente os princípios da Administração Científica pode resultar em falta de eficiência.\"");
+       System.out.println("\n\"Desconsiderar as preocupações dos trabalhadores pode levar à resistência, e ignorar completamente os princípios da Administração "
+       		+ "\nCientífica pode resultar em falta de eficiência.\"");
        pressEnter(scanner);
        System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
        scanner.nextLine();
@@ -625,12 +620,12 @@ public class ProjetoPi {
        }
        
         // Pergunta 3
-        System.out.println("\nEnquanto reorganiza a estrutura organizacional, " + nomeUsuario + " encontra resistência. Um funcionário expressa preocupações.");
+        System.out.println("\nEnquanto reorganiza a estrutura organizacional, " + nome_jogador + " encontra resistência. Um funcionário expressa preocupações.");
         System.out.println("Funcionário: \"Mudança sempre assusta. Estamos perdendo a autonomia. Isso é administração clássica?\"");
-        System.out.println(nomeUsuario + " :Estamos buscando eficiência, mas não quero sacrificar tudo. Como posso promover a mudança sem perder a autonomia? O que tem a me sugerir? \"");
+        System.out.println(nome_jogador + " :Estamos buscando eficiência, mas não quero sacrificar tudo. Como posso promover a mudança sem perder a autonomia? O que tem a me sugerir? \"");
         pressEnter(scanner);
 
-        System.out.println("\nQual característica da abordagem clássica pode ajudar " + nomeUsuario + " a promover mudanças sem perder a autonomia dos trabalhadores?\n"
+        System.out.println("\nQual característica da abordagem clássica pode ajudar " + nome_jogador + " a promover mudanças sem perder a autonomia dos trabalhadores?\n"
                 + "Opção A: Ignorar a hierarquia organizacional.\n"
                 + "Opção B: Valorização da especialização do trabalho.\n"
                 + "Opção C: Desprezar completamente a autonomia.");
@@ -645,8 +640,8 @@ public class ProjetoPi {
         }
         
         // Pergunta 4
-        System.out.println("\nPara promover um ambiente colaborativo," + nomeUsuario + " incentiva atividades de team building.");
-        System.out.println(nomeUsuario + " :Precisamos fortalecer nossos laços. Como podemos promover relações mais fortes entre a equipe?\"");
+        System.out.println("\nPara promover um ambiente colaborativo," + nome_jogador + " incentiva atividades de team building.");
+        System.out.println(nome_jogador + ": Precisamos fortalecer nossos laços. Como podemos promover relações mais fortes entre a equipe?\"");
         System.out.println("Qual a principal contribuição das teorias das relações humanas para a promoção de um ambiente de trabalho colaborativo?\n"
                 + "Opção A: Ênfase na eficiência operacional.\n"
                 + "Opção B: Valorização das relações interpessoais no trabalho.\n"
@@ -662,7 +657,7 @@ public class ProjetoPi {
         }
         
         // Pergunta 5
-        System.out.println("\nAlguns funcionários resistem às mudanças propostas por " + nomeUsuario + " . Um psicólogo da empresa oferece insights.");
+        System.out.println("\nAlguns funcionários resistem às mudanças propostas por " + nome_jogador + " . Um psicólogo da empresa oferece insights.");
         System.out.println("Psicólogo: \"Estamos lidando com mecanismos de defesa aqui. Como podemos abordar isso de maneira eficaz?\"");
         System.out.println("Qual mecanismo de defesa pode estar influenciando a resistência dos funcionários à mudança?\n"
                 + "Opção A: Aceitação.\n"
@@ -679,9 +674,9 @@ public class ProjetoPi {
         }
                 
         // Pergunta 6
-        System.out.println("\nEm uma situação ética, " + nomeUsuario + " precisa tomar uma decisão difícil.");
-        System.out.println(nomeUsuario + ": \"Preciso equilibrar os interesses da empresa com o bem-estar dos funcionários. Como posso fazer isso de maneira ética?\"");
-        System.out.println("Qual abordagem de posicionamento profissional seria mais eficaz para " + nomeUsuario + " nesse contexto ético?\n"
+        System.out.println("\nEm uma situação ética, " + nome_jogador + " precisa tomar uma decisão difícil.");
+        System.out.println(nome_jogador + ": \"Preciso equilibrar os interesses da empresa com o bem-estar dos funcionários. Como posso fazer isso de maneira ética?\"");
+        System.out.println("Qual abordagem de posicionamento profissional seria mais eficaz para " + nome_jogador + " nesse contexto ético?\n"
                 + "Opção A: Colocar os interesses da empresa acima de tudo.\n"
                 + "Opção B: Equilibrar os interesses da empresa com o bem-estar dos funcionários.\n"
                 + "Opção C: Ignorar dilemas éticos para manter a eficiência operacional.");
@@ -693,16 +688,10 @@ public class ProjetoPi {
         } else if (resposta6 == 'B') {
             pressEnter(scanner);
         }
-
-       // Parte final da história
-        System.out.println("\n-------------------------- Apartamento de " + nomeUsuario + " - Noite. -------------------------");
-        System.out.println("\n" + nomeUsuario + " retorna para casa, refletindo sobre o dia.");
-        System.out.println(nomeUsuario + ": “Foi um dia cansativo, a muito o que se fazer, espero estar no caminho certo, e melhor eu ir descansar, para poder pensar melhor diante dessa semana cheia de trabalho, bora dormir!”");
-
-        // Fechar o scanner
-        scanner.close();
+        capitulo_5();
     }
 
+    
     
     // Função para aguardar a entrada do usuário
     private static void pressEnter(Scanner scanner) {
@@ -715,10 +704,11 @@ public class ProjetoPi {
         System.out.print("\nEscolha a opção correta (A, B ou C): ");
         String input = scanner.nextLine().toUpperCase();
         return input.charAt(0);
+        
     }
-}
 
-    }
+
+    
 
     static void capitulo_5() {
         System.out
