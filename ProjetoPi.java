@@ -1,8 +1,8 @@
-package Projeto;
+package ProjetoPi;
 
 import java.util.Scanner;
 
-public class ProjetoTeste {
+public class ProjetoPi {
     static String nome_jogador;
 
     public static void main(String[] args) throws Exception {
@@ -19,8 +19,6 @@ public class ProjetoTeste {
                 + "\nE com essas palavras dá-se ínicio a jornada de um novato no mundo corporativo.\n"
                 + "Seu objetivo agora é se preparar para uma entrevista de emprego, algo que certamente não lhe foi ensinado na \nescola.\n");
         avancarDialogo();
-        System.out.println("Restante da história a desenvolver.\n");
-        // + "determinarão o resultado final. Vamos começar!");
         System.out.println("Eai, tá pronto?");
 
         System.out.println("\n1 - Estou pronto. | 2 - Eu nasci pronto |3 - Sei lá...");
@@ -137,19 +135,15 @@ public class ProjetoTeste {
         int respostasCorretas = 0;
 
         if (resposta_pergunta_1.equalsIgnoreCase("B")) {
-            System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta
-                                                                                              // correta
+            System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+                                                                                              
             respostasCorretas++;
         } else if (resposta_pergunta_1.equalsIgnoreCase("D")) {
             System.out.println(
-                    "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); // Mensagem
-                                                                                                                  // para
-                                                                                                                  // resposta
-                                                                                                                  // alternativa
+                    "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
         } else {
-            System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para
-                                                                                                     // resposta
-                                                                                                     // incorreta
+            System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+                                                                                                     
         }
 
         System.out.println("\nPergunta 2: Como você lida com feedback e críticas construtivas?\n"
@@ -426,8 +420,9 @@ public class ProjetoTeste {
                     + "notei certa exaltação \nem determinados momentos, demonstrando uma postura não tão profissional.");
         } else {
             System.out
-                    .println("\nInstrutor: Aqui na CorpoTech acreditamos que a composição de laços entre os funcionários "
-                            + "é de suma importância na construção de um bom trabalho em equipe, e hoje notamos que você participou minimamente das dinâmicas da empresa.");
+                    .println(
+                            "\nInstrutor: Aqui na CorpoTech acreditamos que a composição de laços entre os funcionários "
+                                    + "é de suma importância na construção de um bom trabalho em equipe, e hoje notamos que você participou minimamente das dinâmicas da empresa.");
         }
         System.out.println(
                 "\nOpção 1: " + nome_jogador
@@ -492,7 +487,96 @@ public class ProjetoTeste {
     static void capitulo_3() {
         System.out.println("\n\n     ..:: CAPITULO 3 ::..         \n" + "\n     O DESPERTAR         \n\n\n");
         Scanner entrada = new Scanner(System.in);
+        System.out.println(nome_jogador + " se vê trabalhando na CorpoTech a alguns meses. Sempre muito diligente, "+nome_jogador+
+        " é um(a) trabalhador(a) exemplar.\n" 
+        + " todo o seu esforço não é em vão, claro. Seus superiores rapidamente percebem o seu alto nível de dedicação, e logo decidem lhe recompensar...\n"
+        + "\n...com mais tarefas.\n"
+        + nome_jogador + "  \nestá designado a um projeto com prazos irrealistas e uma carga de trabalho esmagadora. Ele se sente pressionado para cumprir todas as demandas.\n"
+        + "\"Isso não é certo... mas bem, fazer o quê.\" - pensa " + nome_jogador
+        + "\nAlguns dias se passam, e as cobranças excessivas parecem ter se tornado o novo normal.\n"
+        + nome_jogador + " tenta discutir a carga de trabalho excessiva com seu superior, mas é recebido com desdém.\n"
+        + "Superior: Você é novo aqui, Alex. Precisa mostrar seu comprometimento com a empresa."
+        + nome_jogador + ":Entendo, mas essas expectativas são realmente alcançáveis?\n"
+        + "\nSuperior: Todos conseguem, é só questão de esforço. Não quero desculpas, quero resultados.\n");
+        avancarDialogo();
+        System.out.println("O superior então vira as costas e sai andando tranquilamente em direção ao seu computador, onde aparenta estar vigiando minuciosamente o progresso de seu projeto.\n"
+        + nome_jogador + " percebe que não é o único enfrentando essa sobrecarga. Ele se reúne com alguns colegas para discutir estratégias.\n"
+        + "Colega: Estamos todos enfrentando o mesmo problema. Essa pressão não é saudável.\n"
+        + nome_jogador + ": Concordo. Precisamos encontrar uma maneira de lidar com isso sem comprometer nossa saúde mental.\n"
+        + nome_jogador + " e seu colega de trabalho começam a pesquisar sobre como lidar com sobrecarga de trabalho e práticas de gestão saudáveis.\n"
+        + "\n*---* Você está prestes a participar de um jogo de múltipla escolha, onde apenas uma das opções é correta. *---*\n");
+
+
+        System.out.println("Pergunta 1 - Quais são as abordagens comuns para a divisão de tarefas?\r\n" +
+                "\r\n" +
+                "A) Divisão por especialização\r\n" +
+                "B) Divisão por interesse pessoal\r\n" +
+                "C) Divisão por ordem alfabética\r\n" +
+                "D) Divisão por sorteio");
+
+        String resposta_pergunta_1_cap_3 = entrada.next();
+        int respostasCorretas_cap_3 = 0;
+
+        if (resposta_pergunta_1_cap_3.equalsIgnoreCase("A")) {
+            System.out.println("\nConcordo plenamente!");
+            respostasCorretas_cap_3++;
+
+        } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+            System.out.println("\nColega: Isso não me parece ser sensato......");
+        }
+
+        System.out.println(
+                "Pergunta 2 - Quais estratégias podem ser eficazes ao negociar prazos e demandas excessivas com a administração?\r\n"
+                        + //
+                        "\r\n" + //
+                        "A) Abordagem assertiva\r\n" +
+                        "B) Adoção da postura de confronto\r\n" +
+                        "C) Uso de exemplos pessoais\r\n" +
+                        "D) Apresentação de ultimatos");
+
+        String resposta_pergunta_2_cap_3 = entrada.next();
+        if (resposta_pergunta_2_cap_3.equalsIgnoreCase("A")) {
+            System.out.println("\nConcordo plenamente!");
+            respostasCorretas_cap_3++;
+
+        } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+            System.out.println("\nColega: Isso não me parece ser sensato......");
+        }
+
+        System.out.println("Quais métodos são utilizados para gerenciar o tempo e priorizar tarefas?\r\n" + //
+                "\r\n" + //
+                "A) Matriz de Eisenhower (Tabela de Prioridades)\r\n" + //
+                "B) Método da aleatoriedade\r\n" + //
+                "C) Abordagem do último a chegar, primeiro a fazer\r\n" + //
+                "D) Técnica do pior para o melhor");
+
+        String resposta_pergunta_3_cap_3 = entrada.next();
+        if (resposta_pergunta_3_cap_3.equalsIgnoreCase("A")) {
+            System.out.println("\nConcordo plenamente!");
+            respostasCorretas_cap_3++;
+
+        } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+            System.out.println("\nColega: Isso não me parece ser sensato......");
+        }
+        int totalPerguntas_cap3 = 3;
+        if (respostasCorretas == totalPerguntas) {
+            System.out.println("\n" + nome_jogador
+                    + nome_jogador
+                    + " aborda seu superior e lhe apresenta um relatório elaborado com métodos que visam melhorar as condições de trabalho de seu setor"
+                    + "Superior: Hmm, parece uma boa sugestão. Vou considerar e discutir com a equipe."
+
+                    +nome_jogador+ " e seus colegas veem uma redução na sobrecarga de trabalho, mostrando que a negociação e a busca por soluções podem trazer mudanças positivas.]");
+            capitulo_4();
+        } else {
+            System.out.println(
+                    "\nSua iniciativa de buscar soluções é admirável, no entanto lhe faltou bom senso; infelizmente. Por favor, tente se aprofundar mais nos conceitos que você abordou.\n");
+            System.out.println("Aquele que se empenha a resolver as dificuldades resolve-as antes que elas surjam\n. Aquele que se ultrapassa a vencer os inimigos triunfa antes que as suas ameaças se concretizem."
+                    + "                                      \n                                                   Sun Tzu - A Arte da Guerra\n\n\n");
+        }
     }
+
+
+    
 
     static void capitulo_4() {
 
