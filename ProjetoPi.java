@@ -563,6 +563,157 @@ public class ProjetoPi {
 
     static void capitulo_4() {
 
+        Scanner scanner = new Scanner(System.in);
+
+        // Introdução
+        System.out.println("Capítulo 4: Liderança e Mudança\n");
+
+        // Solicitar o nome do usuário
+        System.out.print("Por favor, insira seu nome: ");
+        String nomeUsuario = scanner.nextLine();
+
+        System.out.println(nomeUsuario + ", agora em um papel de liderança, enfrenta o desafio de transformar a cultura da CorpoTech para melhorar o bem-estar dos funcionários enquanto mantém a eficiência da empresa. Ele reconhece a necessidade de aplicar os princípios aprendidos em administração para liderar essa mudança.");
+        pressEnter(scanner);
+
+        // Escritório de (Nome do usuário) - Tarde
+        System.out.println("----------------------- Escritório de " + nomeUsuario + " - Tarde -----------------");
+        System.out.println(nomeUsuario + " se encontrava em seu novo escritório, encarando a vastidão do desafio que tinha pela frente. Sua promoção a um cargo de liderança na CorpoTech não era apenas um avanço na carreira, mas também uma oportunidade de moldar a cultura da empresa.");
+        pressEnter(scanner);
+
+        // Escritório de (Nome do usuário) - Tarde
+        System.out.println("----------------------- Escritório de " + nomeUsuario + " - Tarde -----------------");
+        System.out.println(nomeUsuario +  " se encontrava em seu novo escritório, encarando a vastidão do desafio que tinha pela frente. Sua promoção a um cargo de liderança na CorpoTech não era apenas um avanço na carreira, mas também uma oportunidade de moldar a cultura da empresa.");
+        pressEnter(scanner);
+
+        // Refletindo sobre a tarefa
+        System.out.println(nomeUsuario + " reflete sobre a enormidade da tarefa à sua frente e compartilha seus pensamentos com um colega.");
+        System.out.println(nomeUsuario + ": \"Estou prestes a liderar uma transformação aqui. Preciso aplicar o que aprendi sobre administração para fazer isso direito.\"");
+        pressEnter(scanner);
+
+        // Pergunta 1
+        System.out.println("\nO que " + nomeUsuario + " deve priorizar ao liderar uma transformação organizacional?\n" +
+                "Opção A: Apenas as necessidades imediatas da empresa.\n" +
+                "Opção B: Um equilíbrio entre as necessidades da empresa e o bem-estar dos funcionários.\n" +
+                "Opção C: A satisfação pessoal dos líderes.");
+        char resposta1 = getUserInput(scanner);
+        if (resposta1 == 'A' || resposta1 == 'C') {
+            System.out.println("\n\"Priorizar apenas as necessidades imediatas da empresa pode negligenciar o impacto nas pessoas, e a satisfação pessoal dos líderes pode não refletir nas necessidades organizacionais ou dos funcionários.\"");
+            pressEnter(scanner);
+            // Aqui você iria para a próxima pergunta
+        } else if (resposta1 == 'B') {
+            pressEnter(scanner);
+            // Continuação da história
+        }
+        // Pergunta 2
+       System.out.println(nomeUsuario + " decide analisar as tarefas da equipe em busca de eficiência. Um colega pergunta sobre a abordagem.");
+       System.out.println("Colega: \"Você está seguindo a Administração Científica. Isso não vai prejudicar a moral dos trabalhadores?\"");
+      System.out.println(nomeUsuario + ": Preciso equilibrar eficiência com o bem-estar. Como podemos fazer isso?\"");
+       pressEnter(scanner);
+
+       System.out.println("\nQual abordagem de liderança compatível com a Administração Científica poderia minimizar impactos negativos na moral dos trabalhadores?\n" +
+        "Opção A: Desconsiderar as preocupações dos trabalhadores para alcançar a eficiência máxima.\n" +
+        "Opção B: Analisar as tarefas de maneira cuidadosa e incluir os trabalhadores no processo de decisão.\n" +
+        "Opção C: Ignorar completamente os princípios da Administração Científica.");
+       char resposta2 = getUserInput(scanner);
+       if (resposta2 == 'A' || resposta2 == 'C') {
+       System.out.println("\n\"Desconsiderar as preocupações dos trabalhadores pode levar à resistência, e ignorar completamente os princípios da Administração Científica pode resultar em falta de eficiência.\"");
+       pressEnter(scanner);
+       System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
+       scanner.nextLine();
+       } else if (resposta2 == 'B') {
+       pressEnter(scanner);
+       }
+       
+        // Pergunta 3
+        System.out.println("\nEnquanto reorganiza a estrutura organizacional, " + nomeUsuario + " encontra resistência. Um funcionário expressa preocupações.");
+        System.out.println("Funcionário: \"Mudança sempre assusta. Estamos perdendo a autonomia. Isso é administração clássica?\"");
+        System.out.println(nomeUsuario + " :Estamos buscando eficiência, mas não quero sacrificar tudo. Como posso promover a mudança sem perder a autonomia? O que tem a me sugerir? \"");
+        pressEnter(scanner);
+
+        System.out.println("\nQual característica da abordagem clássica pode ajudar " + nomeUsuario + " a promover mudanças sem perder a autonomia dos trabalhadores?\n"
+                + "Opção A: Ignorar a hierarquia organizacional.\n"
+                + "Opção B: Valorização da especialização do trabalho.\n"
+                + "Opção C: Desprezar completamente a autonomia.");
+        char resposta3 = getUserInput(scanner);
+        if (resposta3 == 'A' || resposta3 == 'C') {
+            System.out.println("\n\"Ignorar a hierarquia organizacional ou desprezar completamente a autonomia pode resultar em problemas de liderança e descontentamento dos funcionários.\"");
+            pressEnter(scanner);
+            System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
+            scanner.nextLine();
+        } else if (resposta3 == 'B') {
+            pressEnter(scanner);
+        }
+        
+        // Pergunta 4
+        System.out.println("\nPara promover um ambiente colaborativo," + nomeUsuario + " incentiva atividades de team building.");
+        System.out.println(nomeUsuario + " :Precisamos fortalecer nossos laços. Como podemos promover relações mais fortes entre a equipe?\"");
+        System.out.println("Qual a principal contribuição das teorias das relações humanas para a promoção de um ambiente de trabalho colaborativo?\n"
+                + "Opção A: Ênfase na eficiência operacional.\n"
+                + "Opção B: Valorização das relações interpessoais no trabalho.\n"
+                + "Opção C: Desprezo pela satisfação e motivação dos funcionários.");
+        char resposta4 = getUserInput(scanner);
+        if (resposta4 == 'A' || resposta4 == 'C') {
+            System.out.println("\n“As teorias das relações humanas destacam a importância das relações interpessoais para a eficácia organizacional, ao contrário das outras opções.\"");
+            pressEnter(scanner);
+            System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
+            scanner.nextLine();
+        } else if (resposta4 == 'B') {
+            pressEnter(scanner);
+        }
+        
+        // Pergunta 5
+        System.out.println("\nAlguns funcionários resistem às mudanças propostas por " + nomeUsuario + " . Um psicólogo da empresa oferece insights.");
+        System.out.println("Psicólogo: \"Estamos lidando com mecanismos de defesa aqui. Como podemos abordar isso de maneira eficaz?\"");
+        System.out.println("Qual mecanismo de defesa pode estar influenciando a resistência dos funcionários à mudança?\n"
+                + "Opção A: Aceitação.\n"
+                + "Opção B: Projeção.\n"
+                + "Opção C: Adaptação.");
+        char resposta5 = getUserInput(scanner);
+        if (resposta5 == 'A' || resposta5 == 'C') {
+            System.out.println("\n“A aceitação não é um mecanismo de defesa, e a adaptação não reflete uma resposta psicológica típica à resistência à mudança.\"");
+            pressEnter(scanner);
+            System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
+            scanner.nextLine();
+        } else if (resposta5 == 'B') {
+            pressEnter(scanner);
+        }
+                
+        // Pergunta 6
+        System.out.println("\nEm uma situação ética, " + nomeUsuario + " precisa tomar uma decisão difícil.");
+        System.out.println(nomeUsuario + ": \"Preciso equilibrar os interesses da empresa com o bem-estar dos funcionários. Como posso fazer isso de maneira ética?\"");
+        System.out.println("Qual abordagem de posicionamento profissional seria mais eficaz para " + nomeUsuario + " nesse contexto ético?\n"
+                + "Opção A: Colocar os interesses da empresa acima de tudo.\n"
+                + "Opção B: Equilibrar os interesses da empresa com o bem-estar dos funcionários.\n"
+                + "Opção C: Ignorar dilemas éticos para manter a eficiência operacional.");
+        char resposta6 = getUserInput(scanner);
+        if (resposta6 == 'A' || resposta6 == 'C') {
+            System.out.println("\n“Colocar os interesses da empresa acima de tudo ou ignorar dilemas éticos pode resultar em decisões que prejudicam a ética e o bem-estar dos funcionários.\"");
+            pressEnter(scanner);
+            // Aqui você iria para a próxima parte da história
+        } else if (resposta6 == 'B') {
+            pressEnter(scanner);
+        }
+
+        // Fechar o scanner
+        scanner.close();
+    }
+
+    
+    
+    // Função para aguardar a entrada do usuário
+    private static void pressEnter(Scanner scanner) {
+        System.out.println("Pressione ENTER para avançar.");
+        scanner.nextLine();
+    }
+
+    // Função para obter a resposta do usuário
+    private static char getUserInput(Scanner scanner) {
+        System.out.print("\nEscolha a opção correta (A, B ou C): ");
+        String input = scanner.nextLine().toUpperCase();
+        return input.charAt(0);
+    }
+}
+
     }
 
     static void capitulo_5() {
