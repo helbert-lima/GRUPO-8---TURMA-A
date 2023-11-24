@@ -521,7 +521,7 @@ public class ProjetoPi {
             System.out.println("\nConcordo plenamente!");
             respostasCorretas_cap_3++;
 
-        } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+        } else  {
             System.out.println("\nColega: Isso não me parece ser sensato......");
         }
 
@@ -539,7 +539,7 @@ public class ProjetoPi {
             System.out.println("\nConcordo plenamente!");
             respostasCorretas_cap_3++;
 
-        } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+        } else  {
             System.out.println("\nColega: Isso não me parece ser sensato......");
         }
 
@@ -555,7 +555,7 @@ public class ProjetoPi {
             System.out.println("\nConcordo plenamente!");
             respostasCorretas_cap_3++;
 
-        } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+        } else {
             System.out.println("\nColega: Isso não me parece ser sensato......");
         }
         int totalPerguntas_cap3 = 3;
