@@ -694,11 +694,15 @@ public class ProjetoPi {
             pressEnter(scanner);
         }
 
+       // Parte final da história
+        System.out.println("\n-------------------------- Apartamento de " + nomeUsuario + " - Noite. -------------------------");
+        System.out.println("\n" + nomeUsuario + " retorna para casa, refletindo sobre o dia.");
+        System.out.println(nomeUsuario + ": “Foi um dia cansativo, a muito o que se fazer, espero estar no caminho certo, e melhor eu ir descansar, para poder pensar melhor diante dessa semana cheia de trabalho, bora dormir!”");
+
         // Fechar o scanner
         scanner.close();
     }
 
-    
     
     // Função para aguardar a entrada do usuário
     private static void pressEnter(Scanner scanner) {
