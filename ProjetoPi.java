@@ -2,7 +2,7 @@ package Projeto;
 
 import java.util.Scanner;
 
-public class ProjetoTeste {
+public class ProjetoPi {
     static String nome_jogador;
 
     public static void main(String[] args) throws Exception {
