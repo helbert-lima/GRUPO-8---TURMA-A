@@ -3,7 +3,7 @@ package ProjetoPi;
 import java.util.Scanner;
 
 public class ProjetoPi {
-    static String nome_jogador;
+    static String nome_jogador = null;
 
     public static void main(String[] args) throws Exception {
         Scanner entrada = new Scanner(System.in);
@@ -86,6 +86,7 @@ public class ProjetoPi {
 
     static void jogo() {
         Scanner entrada = new Scanner(System.in);
+        
         System.out.println("\nOlá, tudo bem? poderia me dizer o seu nome?\n");
         nome_jogador = entrada.next();
         avancarDialogo();
@@ -111,6 +112,11 @@ public class ProjetoPi {
         Scanner entrada = new Scanner(System.in);
         System.out
                 .println("\n\n     ..:: CAPITULO 1 ::..         \n" + "\n     A ENTREVISTA DE EMPREGO         \n\n\n");
+        if(nome_jogador == null){
+            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
+            nome_jogador = entrada.next();
+            System.out.println("");
+        }
         System.out.println(nome_jogador + " está diante a sala 18 no 1º Andar.\n"
                 + "Suas pernas trêmulas e mãos frias indicam certa ansiedade.\n"
                 + "\n\"Recomponha-se, " + nome_jogador + "!\" não é hora de amarelar. - Pensa " + nome_jogador
@@ -315,8 +321,14 @@ public class ProjetoPi {
 
     static void capitulo_2() {
         Scanner entrada = new Scanner(System.in);
+        
         System.out.println(
                 "\n\n     ..:: CAPITULO 2 ::..         \n" + "\n     OS ANSEIOS DOS RECURSOS HUMANOS         \n\n\n");
+        if(nome_jogador == null){
+            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
+            nome_jogador = entrada.next();
+            System.out.println("");
+        }
         System.out.println(nome_jogador + " se viu novamente nos corredores da CorpoTech.\n"
                 + "Andando em direção a um corredor que parecia não ter fim, estranhou a falta de pessoas naquele dia."
                 + "\n\"Será que é um feriado e eu não tô sabendo?\"\n"
@@ -460,9 +472,11 @@ public class ProjetoPi {
 
         if (escolha_comportamento3 == 1) {
             System.out.println("\n" + nome_jogador + ": Bom, é hora de dormir.");
+            avancarDialogo();
             capitulo_3();
         } else if (escolha_comportamento3 == 2) {
             System.out.println("\n" + nome_jogador + ": Tsc. Que saco.");
+            avancarDialogo();
             capitulo_3();
         }
     }
@@ -470,6 +484,11 @@ public class ProjetoPi {
     static void capitulo_3() {
         System.out.println("\n\n     ..:: CAPITULO 3 ::..         \n" + "\n     O DESPERTAR         \n\n\n");
         Scanner entrada = new Scanner(System.in);
+        if(nome_jogador == null){
+            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
+            nome_jogador = entrada.next();
+            System.out.println("");
+        }
         System.out.println(nome_jogador + " se vê trabalhando na CorpoTech a alguns meses. Sempre muito diligente, "+nome_jogador+
         " é um(a) trabalhador(a) exemplar.\n" 
         + " todo o seu esforço não é em vão, claro. Seus superiores rapidamente percebem o seu alto nível de dedicação, e logo decidem lhe recompensar...\n"
@@ -564,7 +583,11 @@ public class ProjetoPi {
     static void capitulo_4() {
     	System.out.println("\n\n     ..:: CAPITULO 4 ::..         \n" + "\n     LIDERANÇA E MUDANÇA         \n\n\n");
         Scanner scanner = new Scanner(System.in);
-
+        if(nome_jogador == null){
+            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
+            nome_jogador = scanner.next();
+            System.out.println("");
+        }
         
         System.out.println(nome_jogador + ", agora em um papel de liderança, enfrenta o desafio de transformar a cultura da CorpoTech para melhorar "
         		+ "\no bem-estar dos funcionários enquanto mantém a eficiência da empresa. Ele reconhece a necessidade de aplicar os princípios "
@@ -714,7 +737,11 @@ public class ProjetoPi {
         System.out
                 .println("\n\n     ..:: CAPITULO 5 ::..         \n" + "\n     A REVOLUÇÃO CORPORATIVA         \n\n\n");
         Scanner entrada = new Scanner(System.in);
-
+        if(nome_jogador == null){
+            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
+            nome_jogador = entrada.next();
+            System.out.println("");
+        }
         System.out
                 .println("Mesmo após ter assumido um cargo de liderança e tentado diversas vezes implementar melhorias "
                         + "na empresa\nCorpoTech, o pessoal da alta gerência vem ignorando o seu trabalho, "
