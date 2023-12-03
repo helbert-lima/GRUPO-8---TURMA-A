@@ -81,7 +81,7 @@ public class ProjetoPi {
             } else {
                 System.out.println("\nOpção inválida, digite novamente: ");
             }
-        } while (escolha_capitulo != 1 && escolha_capitulo != 2 && escolha_capitulo != 3 && escolha_capitulo != 4);
+        } while (escolha_capitulo != 1 && escolha_capitulo != 2 && escolha_capitulo != 3 && escolha_capitulo != 4 && escolha_capitulo != 5);
     }
 
     static void jogo() {
@@ -112,11 +112,9 @@ public class ProjetoPi {
         Scanner entrada = new Scanner(System.in);
         System.out
                 .println("\n\n     ..:: CAPITULO 1 ::..         \n" + "\n     A ENTREVISTA DE EMPREGO         \n\n\n");
-        if(nome_jogador == null){
-            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
-            nome_jogador = entrada.next();
-            System.out.println("");
-        }
+
+        pedirNome();
+        
         System.out.println(nome_jogador + " está diante a sala 18 no 1º Andar.\n"
                 + "Suas pernas trêmulas e mãos frias indicam certa ansiedade.\n"
                 + "\n\"Recomponha-se, " + nome_jogador + "!\" não é hora de amarelar. - Pensa " + nome_jogador
@@ -142,14 +140,18 @@ public class ProjetoPi {
         String resposta_pergunta_1 = entrada.next();
         int respostasCorretas = 0;
 
-        if (resposta_pergunta_1.equalsIgnoreCase("B")) {
-            System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
-                                                                                              
-            respostasCorretas++;
-        } else if (resposta_pergunta_1.equalsIgnoreCase("D")) {
-            System.out.println(
+        switch(resposta_pergunta_1){
+        	case "b":
+        	case "B":
+        		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta                                                                              
+        		respostasCorretas++;
+        		break;
+        	case "d":
+        	case "D":
+        		System.out.println(
                     "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
-        } else {
+        		break;
+        	default:
             System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
                                                                                                      
         }
@@ -162,16 +164,19 @@ public class ProjetoPi {
 
         String resposta_pergunta_2 = entrada.next();
 
-        if (resposta_pergunta_2.equalsIgnoreCase("B")) {
+        switch(resposta_pergunta_2){
+        case "b":
+        case "B":
             System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta
-                                                                                              // correta
-            respostasCorretas++;
-        } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+            respostasCorretas++;                                                              // correta
+            break;
+        case "d":
+    	case "D":
             System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem
-                                                                                                              // para
-                                                                                                              // resposta
-                                                                                                              // alternativa
-        } else {
+            break;                                                                                            // para
+            																								// resposta
+            																								// alternativa
+    	default:
             System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para
                                                                                                      // resposta
                                                                                                      // incorreta
@@ -185,16 +190,19 @@ public class ProjetoPi {
 
         String resposta_pergunta_3 = entrada.next();
 
-        if (resposta_pergunta_3.equalsIgnoreCase("B")) {
+        switch(resposta_pergunta_3){
+        case "b":
+        case "B":
             System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta
-                                                                                              // correta
-            respostasCorretas++;
-        } else if (resposta_pergunta_2.equalsIgnoreCase("D")) {
+            respostasCorretas++;                                                              // correta
+            break;
+        case "d":
+    	case "D":
             System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem
-                                                                                                              // para
+            break;                                                                                            // para
                                                                                                               // resposta
                                                                                                               // alternativa
-        } else {
+        default:
             System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para
                                                                                                      // resposta
                                                                                                      // incorreta
@@ -208,19 +216,22 @@ public class ProjetoPi {
 
         String resposta_pergunta_4 = entrada.next();
 
-        if (resposta_pergunta_4.equalsIgnoreCase("B")) {
+        switch(resposta_pergunta_4){
+        case "b":
+        case "B":
             System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta
-                                                                                              // correta
-            respostasCorretas++;
-        } else if (resposta_pergunta_4.equalsIgnoreCase("D")) {
+            respostasCorretas++;                                                              // correta
+            break;
+        case "d":
+    	case "D":
             System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem
-                                                                                                              // para
+            break;                                                                                            // para
                                                                                                               // resposta
                                                                                                               // alternativa
-        } else {
-            System.out.println("\nEntrevistadora:  Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para
-                                                                                                      // resposta
-                                                                                                      // incorreta
+        default:
+            System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para
+                                                                                                     // resposta
+                                                                                                     // incorreta
         }
 
         System.out.println("\nPergunta 5: Qual é a sua abordagem ao aprender novas habilidades ou tecnologia?\n"
@@ -231,19 +242,23 @@ public class ProjetoPi {
 
         String resposta_pergunta_5 = entrada.next();
 
-        if (resposta_pergunta_5.equalsIgnoreCase("B")) {
-            System.out.println("\n-Entrevistadora: Hmm. Tudo bem. Esta foi a última pergunta."); // Mensagem para
-                                                                                                 // resposta correta
-            respostasCorretas++;
-        } else if (resposta_pergunta_5.equalsIgnoreCase("D")) {
-            System.out.println("\nEntrevistadora: Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
-            System.out.println(nome_jogador
+        switch(resposta_pergunta_5){
+        	case "b":
+        	case "B":
+        		System.out.println("\n-Entrevistadora: Hmm. Tudo bem. Esta foi a última pergunta."); // Mensagem para resposta
+        		respostasCorretas++;                                                              // correta
+                break;
+            case "d":
+        	case "D":
+        		System.out.println("\nEntrevistadora: Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
+        		System.out.println(nome_jogador
                     + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
-            System.out.println(
+        		System.out.println(
                     "Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
-            System.out.println("Pó deixa chefia.");
-        } else {
-            System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para
+        		System.out.println("Pó deixa chefia.");
+        		break;
+        	default:
+            	System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para
                                                                                                  // resposta incorreta
         }
 
@@ -255,7 +270,9 @@ public class ProjetoPi {
                     + ".\n"
                     + nome_jogador
                     + " se levanta, sem sinais de nervosismo e com sua auto-estima revigorada, aperta a mão da entrevistadora e se \nretira da sala."
-                    + "\nAtrás de si uma porta se fecha. Só o que resta agora é o Jornada em frente.");
+                    + "\nAtrás de si uma porta se fecha. Só o que resta agora é o Jornada em frente."
+                    + "\n\n“Parabéns, "+nome_jogador+", suas respostas indicam que você é o candidato perfeito! Seja Bem-Vindo CorpoTech”");
+            avancarDialogo();
             capitulo_2();
         } else {
             System.out.println(
@@ -324,11 +341,9 @@ public class ProjetoPi {
         
         System.out.println(
                 "\n\n     ..:: CAPITULO 2 ::..         \n" + "\n     OS ANSEIOS DOS RECURSOS HUMANOS         \n\n\n");
-        if(nome_jogador == null){
-            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
-            nome_jogador = entrada.next();
-            System.out.println("");
-        }
+
+        pedirNome();
+    	
         System.out.println(nome_jogador + " se viu novamente nos corredores da CorpoTech.\n"
                 + "Andando em direção a um corredor que parecia não ter fim, estranhou a falta de pessoas naquele dia."
                 + "\n\"Será que é um feriado e eu não tô sabendo?\"\n"
@@ -484,11 +499,9 @@ public class ProjetoPi {
     static void capitulo_3() {
         System.out.println("\n\n     ..:: CAPITULO 3 ::..         \n" + "\n     O DESPERTAR         \n\n\n");
         Scanner entrada = new Scanner(System.in);
-        if(nome_jogador == null){
-            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
-            nome_jogador = entrada.next();
-            System.out.println("");
-        }
+
+        pedirNome();
+    	
         System.out.println(nome_jogador + " se vê trabalhando na CorpoTech a alguns meses. Sempre muito diligente, "+nome_jogador+
         " é um(a) trabalhador(a) exemplar.\n" 
         + " todo o seu esforço não é em vão, claro. Seus superiores rapidamente percebem o seu alto nível de dedicação, e logo decidem lhe recompensar...\n"
@@ -582,12 +595,9 @@ public class ProjetoPi {
 
     static void capitulo_4() {
     	System.out.println("\n\n     ..:: CAPITULO 4 ::..         \n" + "\n     LIDERANÇA E MUDANÇA         \n\n\n");
-        Scanner scanner = new Scanner(System.in);
-        if(nome_jogador == null){
-            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
-            nome_jogador = scanner.next();
-            System.out.println("");
-        }
+    	
+    	Scanner scanner = new Scanner(System.in);
+    	pedirNome();
         
         System.out.println(nome_jogador + ", agora em um papel de liderança, enfrenta o desafio de transformar a cultura da CorpoTech para melhorar "
         		+ "\no bem-estar dos funcionários enquanto mantém a eficiência da empresa. Ele reconhece a necessidade de aplicar os princípios "
@@ -737,11 +747,9 @@ public class ProjetoPi {
         System.out
                 .println("\n\n     ..:: CAPITULO 5 ::..         \n" + "\n     A REVOLUÇÃO CORPORATIVA         \n\n\n");
         Scanner entrada = new Scanner(System.in);
-        if(nome_jogador == null){
-            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
-            nome_jogador = entrada.next();
-            System.out.println("");
-        }
+        
+        pedirNome();
+    	
         System.out
                 .println("Mesmo após ter assumido um cargo de liderança e tentado diversas vezes implementar melhorias "
                         + "na empresa\nCorpoTech, o pessoal da alta gerência vem ignorando o seu trabalho, "
@@ -855,7 +863,7 @@ public class ProjetoPi {
         Scanner entrada = new Scanner(System.in);
         int escolha_menu;
         System.out.println(
-                "\n\n</> Desenvolvedores </>\n\n-> Helbert \n-> Juan Miller \n-> Melina Michele \n-> Rômulo Andrade");
+                "\n\n</> Desenvolvedores </>\n\n-> Helbert Lima \n-> Juan Miller \n-> Melina Michele \n-> Rômulo Andrade");
         do {
             System.out.println("\n2 - Sair");
             escolha_menu = entrada.nextInt();
@@ -875,8 +883,17 @@ public class ProjetoPi {
         if (avancar.equals("")) {
             return true; // Retorna true se o usuário pressionou apenas Enter
         } else {
-            System.out.println("Por favor, pressione Enter para avançar.");
+            System.out.println("Por favor, pressione Enter para avançar.\n");
             return false;
         }
     }
-}
+    
+    static void pedirNome() {
+    	Scanner scanner = new Scanner(System.in);
+        if(nome_jogador == null){
+            System.out.println("Antes de prosseguir, digite o seu Nome: \n");
+            nome_jogador = scanner.next();
+            System.out.println("");
+        }
+    }
+} 
