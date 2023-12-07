@@ -2,7 +2,7 @@ package ProjetoPi;
 
 import java.util.Scanner;
 
-public class ProjetoPi {
+public class ProjetoPI {
     static String nome_jogador = null;
 
     public static void main(String[] args) throws Exception {
@@ -636,55 +636,6 @@ public class ProjetoPi {
             pressEnter(scanner);
         }
         
-        // Pergunta 4
-        System.out.println("\nPara promover um ambiente colaborativo," + nome_jogador + " incentiva atividades de team building.");
-        System.out.println(nome_jogador + ": Precisamos fortalecer nossos laços. Como podemos promover relações mais fortes entre a equipe?\"");
-        System.out.println("Qual a principal contribuição das teorias das relações humanas para a promoção de um ambiente de trabalho colaborativo?\n"
-                + "Opção A: Ênfase na eficiência operacional.\n"
-                + "Opção B: Valorização das relações interpessoais no trabalho.\n"
-                + "Opção C: Desprezo pela satisfação e motivação dos funcionários.");
-        char resposta4 = ConferenciaDeResposta(scanner);
-        if (resposta4 == 'A' || resposta4 == 'C') {
-            System.out.println("\n“As teorias das relações humanas destacam a importância das relações interpessoais para a eficácia organizacional, ao contrário das outras opções.\"");
-            pressEnter(scanner);
-            System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
-            scanner.nextLine();
-        } else if (resposta4 == 'B') {
-            pressEnter(scanner);
-        }
-        
-        // Pergunta 5
-        System.out.println("\nAlguns funcionários resistem às mudanças propostas por " + nome_jogador + " . Um psicólogo da empresa oferece insights.");
-        System.out.println("Psicólogo: \"Estamos lidando com mecanismos de defesa aqui. Como podemos abordar isso de maneira eficaz?\"");
-        System.out.println("Qual mecanismo de defesa pode estar influenciando a resistência dos funcionários à mudança?\n"
-                + "Opção A: Aceitação.\n"
-                + "Opção B: Projeção.\n"
-                + "Opção C: Adaptação.");
-        char resposta5 = ConferenciaDeResposta(scanner);
-        if (resposta5 == 'A' || resposta5 == 'C') {
-            System.out.println("\n“A aceitação não é um mecanismo de defesa, e a adaptação não reflete uma resposta psicológica típica à resistência à mudança.\"");
-            pressEnter(scanner);
-            System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
-            scanner.nextLine();
-        } else if (resposta5 == 'B') {
-            pressEnter(scanner);
-        }
-                
-        // Pergunta 6
-        System.out.println("\nEm uma situação ética, " + nome_jogador + " precisa tomar uma decisão difícil.");
-        System.out.println(nome_jogador + ": \"Preciso equilibrar os interesses da empresa com o bem-estar dos funcionários. Como posso fazer isso de maneira ética?\"");
-        System.out.println("Qual abordagem de posicionamento profissional seria mais eficaz para " + nome_jogador + " nesse contexto ético?\n"
-                + "Opção A: Colocar os interesses da empresa acima de tudo.\n"
-                + "Opção B: Equilibrar os interesses da empresa com o bem-estar dos funcionários.\n"
-                + "Opção C: Ignorar dilemas éticos para manter a eficiência operacional.");
-        char resposta6 = ConferenciaDeResposta(scanner);
-        if (resposta6 == 'A' || resposta6 == 'C') {
-            System.out.println("\n“Colocar os interesses da empresa acima de tudo ou ignorar dilemas éticos pode resultar em decisões que prejudicam a ética e o bem-estar dos funcionários.\"");
-            pressEnter(scanner);
-            // Aqui você iria para a próxima parte da história
-        } else if (resposta6 == 'B') {
-            pressEnter(scanner);
-        }
         capitulo_5();
     }
 
@@ -860,4 +811,4 @@ public class ProjetoPi {
             System.out.println("");
         }
     }
-} 
+}
