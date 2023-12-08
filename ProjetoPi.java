@@ -1,8 +1,10 @@
 package ProjetoPi;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
-public class ProjetoPI {
+public class ProjetoPi {
     static String nome_jogador = null;
 
     public static void main(String[] args) throws Exception {
@@ -129,6 +131,7 @@ public class ProjetoPI {
 
     static void capitulo_1() {
         Scanner entrada = new Scanner(System.in);
+        String a, b, c, d;
         System.out
                 .println("\n\n     ..:: CAPITULO 1 ::..         \n" + "\n     A ENTREVISTA DE EMPREGO         \n\n\n");
 
@@ -150,83 +153,250 @@ public class ProjetoPI {
                 "*---* Você está prestes a participar de um jogo de múltipla escolha, onde apenas uma das opções é correta. *---*\n"
                         +
                         "               Acerte as respostas para passar na entrevista de emprego!\n\n"
-                        + "Pergunta 1: Como você descreveria suas habilidades de trabalho em equipe?\n"
-                        + "\nA - Tenho dificuldade em trabalhar com outras pessoas.\n"
-                        + "\nB - Eu trabalho bem em equipe e colaboro efetivamente.\n"
-                        + "\nC - Prefiro trabalhar sozinho e evitar equipes.\n"
-                        + "\nD - nois trabalha sem câoh tá ligado meu? nois é responsa mano.\n");
-
+                        + "Pergunta 1: Como você descreveria suas habilidades de trabalho em equipe?\n\n");
+        
+        a = " Tenho dificuldade em trabalhar com outras pessoas.\n\n";
+        b = " Eu trabalho bem em equipe e colaboro efetivamente.\n\n";
+        c = " Prefiro trabalhar sozinho e evitar equipes.\n\n";
+        d = " Nois trabalha sem câoh tá ligado meu? nois é responsa mano.\n\n";
+        
+        ArrayList<String> listaResp = new ArrayList<String>();
+        listaResp.add(0,a);
+        listaResp.add(1,b);
+        listaResp.add(2,c);
+        listaResp.add(3,d);
+        Collections.shuffle(listaResp);
+        String embaralhaResp = "A)"+listaResp.get(0)+"B)"+listaResp.get(1)+"C)"+listaResp.get(2)+"D)"+listaResp.get(3);
+        
+        System.out.println(embaralhaResp);
+        
         String resposta_pergunta_1 = entrada.next();
+        String correct_resp = b;
+        String resp_alt = d;
         int respostasCorretas = 0;
 
         switch(resposta_pergunta_1){
-        	case "b":
-        	case "B":
+        	case "a":
+        	case "A":
+        		if(listaResp.get(0) == correct_resp) {
         		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta                                                                              
         		respostasCorretas++;
-        		break;
+        		} else if (listaResp.get(0) == resp_alt) {
+        			System.out.println(
+                            "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
+        		} else {
+        			System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+        		}	
+        	break;
+        	
+        	case "b":
+        	case "B":
+        		if(listaResp.get(1) == correct_resp) {
+        		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta                                                                              
+        		respostasCorretas++;
+        		} else if (listaResp.get(1) == resp_alt) {
+        			System.out.println(
+                            "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
+        		} else {
+        			System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+        		}	
+        	break;
+        	
+        	case "c":
+        	case "C":
+        		if(listaResp.get(2) == correct_resp) {
+        		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta                                                                              
+        		respostasCorretas++;
+        		} else if (listaResp.get(2) == resp_alt) {
+        			System.out.println(
+                            "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
+        		} else {
+        			System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+        		}	
+        	break;
+        	
         	case "d":
         	case "D":
-        		System.out.println(
-                    "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
-        		break;
+        		if(listaResp.get(3) == correct_resp) {
+        		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta                                                                              
+        		respostasCorretas++;
+        		} else if (listaResp.get(3) == resp_alt) {
+        			System.out.println(
+                            "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
+        		} else {
+        			System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+        		}	
+        	break;
+        	
         	default:
             System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
                                                                                                      
         }
 
-        System.out.println("\nPergunta 2: Como você prioriza suas tarefas quando tem várias para fazer?\n"
-                + "\nA - Eu fico sobrecarregado e não sei por onde começar.\n"
-                + "\nB - Eu priorizo tarefas com base em sua importância e prazos.\n"
-                + "\nC - Eu procrastino e deixo tudo para a última hora.\n"
-                + "\nD - \"Nois\" tá sempre no corre sabe como é ne, a vida não perdoa os \"cria.\"\n");
-
+        System.out.println("\nPergunta 2: Como você prioriza suas tarefas quando tem várias para fazer?\n\n");
+        
+        a = " Eu fico sobrecarregado e não sei por onde começar.\n\n";
+        b = " Eu priorizo tarefas com base em sua importância e prazos.\n\n";
+        c = " Eu procrastino e deixo tudo para a última hora.\n\n";
+        d = " \"Nois\" tá sempre no corre sabe como é ne, a vida não perdoa os \"cria.\"\n\n";
+        
+        ArrayList<String> listaResp2 = new ArrayList<String>();
+        listaResp2.add(0,a);
+        listaResp2.add(1,b);
+        listaResp2.add(2,c);
+        listaResp2.add(3,d);
+        Collections.shuffle(listaResp2);
+        String embaralhaResp2 = "A)"+listaResp2.get(0)+"B)"+listaResp2.get(1)+"C)"+listaResp2.get(2)+"D)"+listaResp2.get(3);
+        
+        System.out.println(embaralhaResp2);
+        
         String resposta_pergunta_2 = entrada.next();
+        String correct_resp2 = b;
+        String resp_alt2 = d;
 
         switch(resposta_pergunta_2){
+        case "a":
+        case "A":
+        	if(listaResp2.get(0) == correct_resp2) {
+        		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+        		respostasCorretas++;
+        	} else if (listaResp2.get(0) == resp_alt2) {
+        		System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+        	} else {
+        		System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+        	}
+            break;
+            
         case "b":
         case "B":
-            System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta
-            respostasCorretas++;                                                              // correta
+        	if(listaResp2.get(1) == correct_resp2) {
+        		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+        		respostasCorretas++;
+        	} else if (listaResp2.get(1) == resp_alt2) {
+        		System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+        	} else {
+        		System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+        	}
             break;
+            
+        case "c":
+        case "C":
+        	if(listaResp2.get(2) == correct_resp2) {
+        		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+        		respostasCorretas++;                                                              
+        	} else if (listaResp2.get(2) == resp_alt2) {
+        		System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+        	} else {
+        		System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+        	}
+            break;
+            
         case "d":
-    	case "D":
-            System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem
-            break;                                                                                            // para
-                                                                                                              // resposta
-                                                                                                              // alternativa
+        case "D":
+        	if(listaResp2.get(3) == correct_resp2) {
+        		System.out.println("\nEntrevistadora: Hmm. Tudo bem. Vamos à próxima pergunta."); // Mensagem para resposta correta
+        		respostasCorretas++;                                                              
+        	} else if (listaResp2.get(3) == resp_alt2) {
+        		System.out.println("\nEntrevistadora: Beleza \"menor\". Vamos para a próxima pergunta então..."); // Mensagem para resposta alternativa
+        	} else {
+        		System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
+        	}
+            break;
+            
         default:
-            System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para
-                                                                                                     // resposta
-                                                                                                     // incorreta
+            System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
         }
 
-        System.out.println("\nPergunta 3: Qual é a sua abordagem ao aprender novas habilidades ou tecnologia?\n"
-                + "\nA - Eu não gosto de aprender coisas novas.\n"
-                + "\nB - Estou disposto a aprender e me manter atualizado.\n"
-                + "\nC - Eu já sei tudo o que é importante.\n"
-                + "\nD - Eu falo com o Dérick.\n");
-
+        System.out.println("\nPergunta 3: Qual é a sua abordagem ao aprender novas habilidades ou tecnologia?\n\n");
+        
+        a = " Eu não gosto de aprender coisas novas.\n\n";
+        b = " Estou disposto a aprender e me manter atualizado.\n\n";
+        c = " Eu já sei tudo o que é importante.\n\n";
+        d = " Eu falo com o Dérick.\n\n";
+        
+        ArrayList<String> listaResp3 = new ArrayList<String>();
+        listaResp3.add(0,a);
+        listaResp3.add(1,b);
+        listaResp3.add(2,c);
+        listaResp3.add(3,d);
+        Collections.shuffle(listaResp3);
+        String embaralhaResp3 = "A)"+listaResp3.get(0)+"B)"+listaResp3.get(1)+"C)"+listaResp3.get(2)+"D)"+listaResp3.get(3);
+        
+        System.out.println(embaralhaResp3);
+        
         String resposta_pergunta_3 = entrada.next();
+        String correct_resp3 = b;
+        String resp_alt3 = d;
 
         switch(resposta_pergunta_3){
+        	case "a":
+        	case "A":
+        		if(listaResp3.get(0) == correct_resp3) {
+        			System.out.println("\n-Entrevistadora: Hmm. Tudo bem. Esta foi a última pergunta."); // Mensagem para resposta correta
+        			respostasCorretas++;
+        		} else if (listaResp3.get(0) == resp_alt3) {
+        			System.out.println("\nEntrevistadora: Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
+            		System.out.println(nome_jogador
+                        + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
+            		System.out.println(
+                        "Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
+            		System.out.println("Pó deixa chefia.");
+        		} else {
+        			System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
+        		}
+                break;
+                
         	case "b":
         	case "B":
-        		System.out.println("\n-Entrevistadora: Hmm. Tudo bem. Esta foi a última pergunta."); // Mensagem para resposta
-        		respostasCorretas++;                                                              // correta
+        		if(listaResp3.get(1) == correct_resp3) {
+        			System.out.println("\n-Entrevistadora: Hmm. Tudo bem. Esta foi a última pergunta."); // Mensagem para resposta correta
+        			respostasCorretas++;
+        		} else if (listaResp3.get(1) == resp_alt3) {
+        			System.out.println("\nEntrevistadora: Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
+            		System.out.println(nome_jogador
+                        + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
+            		System.out.println(
+                        "Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
+            		System.out.println("Pó deixa chefia.");
+        		} else {
+        			System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
+        		}
                 break;
-            case "d":
+        	case "c":
+        	case "C":
+        		if(listaResp3.get(2) == correct_resp3) {
+        			System.out.println("\n-Entrevistadora: Hmm. Tudo bem. Esta foi a última pergunta."); // Mensagem para resposta correta
+        			respostasCorretas++;
+        		} else if (listaResp3.get(2) == resp_alt3) {
+        			System.out.println("\nEntrevistadora: Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
+            		System.out.println(nome_jogador
+                        + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
+            		System.out.println(
+                        "Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
+            		System.out.println("Pó deixa chefia.");
+        		} else {
+        			System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
+        		}
+                break;
+        	case "d":
         	case "D":
-        		System.out.println("\nEntrevistadora: Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
-        		System.out.println(nome_jogador
-                    + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
-        		System.out.println(
-                    "Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
-        		System.out.println("Pó deixa chefia.");
-        		break;
+        		if(listaResp3.get(3) == correct_resp3) {
+        			System.out.println("\n-Entrevistadora: Hmm. Tudo bem. Esta foi a última pergunta."); // Mensagem para resposta correta
+        			respostasCorretas++;
+        		} else if (listaResp3.get(3) == resp_alt3) {
+        			System.out.println("\nEntrevistadora: Quem é  \"Derick\"? "); // Mensagem para resposta alternativa
+            		System.out.println(nome_jogador
+                        + ": É o meu primo que tá estudando essas coisa ai de computador ele manja muito tá ligado?");
+            		System.out.println(
+                        "Entrevistador: Entendi, gostei desse Dérick. Estamos aceitando indicações caso sinta que o Derick se encaixe no perfil da empresa.");
+            		System.out.println("Pó deixa chefia.");
+        		} else {
+        			System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
+        		}
+                break;
+                
         	default:
-            	System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para
-                                                                                                 // resposta incorreta
+            	System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
         }
 
         int totalPerguntas = 3;
@@ -471,7 +641,7 @@ public class ProjetoPI {
     	
         System.out.println(nome_jogador + " se vê trabalhando na CorpoTech a alguns meses. Sempre muito diligente, "+nome_jogador+
         " é um(a) trabalhador(a) exemplar.\n" 
-        + " todo o seu esforço não é em vão, claro. Seus superiores rapidamente percebem o seu alto nível de dedicação, e logo decidem lhe recompensar...\n"
+        + "todo o seu esforço não é em vão, claro. Seus superiores rapidamente percebem o seu alto nível de dedicação, e logo decidem lhe recompensar...\n"
         + "\n...com mais tarefas.\n"
         + nome_jogador + " está designado a um projeto com prazos irrealistas e uma carga de trabalho esmagadora. Ele se sente pressionado para cumprir todas as demandas.\n"
         + "\"Isso não é certo... mas bem, fazer o quê.\" - pensa " + nome_jogador
@@ -542,17 +712,17 @@ public class ProjetoPI {
         }
         int totalPerguntas_cap3 = 3;
         if (respostasCorretas_cap_3 == totalPerguntas_cap3) {
-            System.out.println("\n" + nome_jogador
+            System.out.println("\n"
                     + nome_jogador
-                    + " aborda seu superior e lhe apresenta um relatório elaborado com métodos que visam melhorar as condições de trabalho de seu setor"
-                    + "Superior: Hmm, parece uma boa sugestão. Vou considerar e discutir com a equipe."
+                    + " aborda seu superior e lhe apresenta um relatório elaborado com métodos que visam melhorar as condições de trabalho \nde seu setor."
+                    + "\nSuperior: Hmm, parece uma boa sugestão. Vou considerar e discutir com a equipe. \n\n"
 
-                    +nome_jogador+ " e seus colegas veem uma redução na sobrecarga de trabalho, mostrando que a negociação e a busca por soluções podem trazer mudanças positivas.]");
+                    +nome_jogador+ " e seus colegas veem uma redução na sobrecarga de trabalho, mostrando que a negociação e a busca por soluções podem \ntrazer mudanças positivas.");
             capitulo_4();
         } else {
             System.out.println(
                     "\nSua iniciativa de buscar soluções é admirável, no entanto lhe faltou bom senso; infelizmente. Por favor, tente \nse aprofundar mais nos conceitos que você abordou.\n");
-            System.out.println("Aquele que se empenha a resolver as dificuldades resolve-as antes que elas surjam\n. Aquele que se ultrapassa a vencer os inimigos triunfa antes que as suas ameaças se concretizem."
+            System.out.println("Aquele que se empenha a resolver as dificuldades resolve-as antes que elas surjam. \nAquele que se ultrapassa a vencer os inimigos triunfa antes que as suas ameaças se concretizem."
                     + "                                      \n                                                   Sun Tzu - A Arte da Guerra\n\n\n");
         }
     }
@@ -620,7 +790,7 @@ public class ProjetoPI {
         System.out.println("\nEnquanto reorganiza a estrutura organizacional, " + nome_jogador + " encontra resistência. Um funcionário expressa preocupações.");
         System.out.println("Funcionário: \"Mudança sempre assusta. Estamos perdendo a autonomia. Isso é administração clássica?\"");
         System.out.println(nome_jogador + " :Estamos buscando eficiência, mas não quero sacrificar tudo. Como posso promover a mudança sem perder a autonomia? O que tem a me sugerir? \"");
-        pressEnter(scanner);
+        avancarDialogo();
 
         System.out.println("\nQual característica da abordagem clássica pode ajudar " + nome_jogador + " a promover mudanças sem perder a autonomia dos trabalhadores?\n"
                 + "Opção A: Ignorar a hierarquia organizacional.\n"
@@ -629,26 +799,16 @@ public class ProjetoPI {
         char resposta3 = ConferenciaDeResposta(scanner);
         if (resposta3 == 'A' || resposta3 == 'C') {
             System.out.println("\n\"Ignorar a hierarquia organizacional ou desprezar completamente a autonomia pode resultar em problemas de liderança e descontentamento dos funcionários.\"");
-            pressEnter(scanner);
-            System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
-            scanner.nextLine();
+            avancarDialogo();
         } else if (resposta3 == 'B') {
-            pressEnter(scanner);
+            avancarDialogo();
         }
         
         capitulo_5();
     }
 
-    
-    
-    // Função para aguardar a entrada do usuário
-    private static void pressEnter(Scanner scanner) {
-        System.out.println("Pressione ENTER para avançar.");
-        scanner.nextLine();
-    }
-
     // Função para obter a resposta do usuário
-    private static char ConferenciaDeResposta(Scanner scanner) {
+    static char ConferenciaDeResposta(Scanner scanner) {
         System.out.print("\nEscolha a opção correta (A, B ou C): ");
         String input = scanner.nextLine().toUpperCase();
         return input.charAt(0);
