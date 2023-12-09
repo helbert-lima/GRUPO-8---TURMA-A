@@ -90,19 +90,36 @@ public class ProjetoPi {
     
     static void instrução() {
     	Scanner input = new Scanner(System.in);
-    	System.out.println("\n\n     ..:: A JORNADA DO NOVATO - INSTRUÇÕES ::..         \n");
-    	System.err.println("Etapa ainda em Produção.");
-    	System.out.println("Mas você ainda pode voltar ao menu e optar por outras opções.");
-    	System.out.println("\nPara voltar ao menu basta digitar \"Menu\" ou \"Voltar\", caso não, basta digitar \"Sair\" ou qualquer coisa.");
-    	String resp = input.next().toUpperCase();
+    	System.out.println("\n\n     ..:: A JORNADA DO NOVATO - INSTRUÇÕES ::..         \n\n");
     	
-    	switch(resp) {
-    	case "MENU":
-    	case "VOLTAR":
-    		menu();
+    	System.out.println("Olá Jogador, Bem Vindo ao Jogo. "
+    			+ "\nNesta etapa inicial te ajudaremos brevemente a como jogar o nosso jogo, Partiu?\n");
+    	avancarDialogo();
+    	
+    	System.out.println("\nEntão, para começar, o nosso jogo é baseado em contextualização e perguntas, da qual você terá"
+    			+ "\nque ler, interpretar e responder as perguntas, selecionando alternativas, tipo 1, 2 e 3, ou"
+    			+ "\nA, B e C, entendindo Novato?"
+    			+ "\n\nVamos testar, mande A, B e C ou 1, 2 e 3 aí para a gente:");
+    	String testIt = input.next().toUpperCase();
+    	
+    	switch(testIt) {
+    	case "1":
+    	case "2":
+    	case "3":
+    	case "A":
+    	case "B":
+    	case "C":
+    		System.out.println("Muito bem Jogador, já tá entendendo como se interagir no Jogo, já é um passo para a próxima etapa.");
+    		break;
     	default:
-    		System.exit(0);
+    		System.out.println("Mesmo mandando algo que não tenha, esperamos que você tenha capitado como iniciar, portanto vamos seguir em frente.");
     	}
+    	
+    	System.out.println("\n\nBom, agora que você já entendeu como jogar, vamos para o jogo...\n");
+    	avancarDialogo();
+    	System.out.println("\n     I N I C I A N D O . . .\n\n");
+    	jogo();
+    	
     }
 
     static void jogo() {
@@ -131,7 +148,8 @@ public class ProjetoPi {
 
     static void capitulo_1() {
         Scanner entrada = new Scanner(System.in);
-        String a, b, c, d;
+        String a, b, c, d, refCap1 = null;
+        String select1, select2, select3;
         System.out
                 .println("\n\n     ..:: CAPITULO 1 ::..         \n" + "\n     A ENTREVISTA DE EMPREGO         \n\n\n");
 
@@ -149,6 +167,7 @@ public class ProjetoPi {
                 + "\nA atmosfera pesada e a tensão no ar são quase palpáveis."
                 + "\nEntrevistadora: Bom dia, " + nome_jogador + ". Por favor, sente-se."
                 + "\nO coração acelera, mas é hora de mostrar sua melhor versão.\n");
+        do {
         System.out.println(
                 "*---* Você está prestes a participar de um jogo de múltipla escolha, onde apenas uma das opções é correta. *---*\n"
                         +
@@ -171,6 +190,7 @@ public class ProjetoPi {
         System.out.println(embaralhaResp);
         
         String resposta_pergunta_1 = entrada.next();
+        select1 = null;
         String correct_resp = b;
         String resp_alt = d;
         int respostasCorretas = 0;
@@ -186,7 +206,8 @@ public class ProjetoPi {
                             "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
         		} else {
         			System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
-        		}	
+        		}
+        		select1 = listaResp.get(0);
         	break;
         	
         	case "b":
@@ -199,7 +220,8 @@ public class ProjetoPi {
                             "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
         		} else {
         			System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
-        		}	
+        		}
+        		select1 = listaResp.get(1);
         	break;
         	
         	case "c":
@@ -212,7 +234,8 @@ public class ProjetoPi {
                             "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
         		} else {
         			System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
-        		}	
+        		}
+        		select1 = listaResp.get(2);
         	break;
         	
         	case "d":
@@ -225,7 +248,8 @@ public class ProjetoPi {
                             "\nEntrevistadora: É... tá certo, entendi \"mano\". Vamos para a próxima pergunta então..."); //Mensagem para resposta alternativa
         		} else {
         			System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
-        		}	
+        		}
+        		select1 = listaResp.get(3);
         	break;
         	
         	default:
@@ -251,6 +275,7 @@ public class ProjetoPi {
         System.out.println(embaralhaResp2);
         
         String resposta_pergunta_2 = entrada.next();
+        select2 = null;
         String correct_resp2 = b;
         String resp_alt2 = d;
 
@@ -265,6 +290,7 @@ public class ProjetoPi {
         	} else {
         		System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
         	}
+    		select2 = listaResp2.get(0);
             break;
             
         case "b":
@@ -277,6 +303,7 @@ public class ProjetoPi {
         	} else {
         		System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
         	}
+    		select2 = listaResp2.get(1);
             break;
             
         case "c":
@@ -289,6 +316,7 @@ public class ProjetoPi {
         	} else {
         		System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
         	}
+    		select2 = listaResp2.get(2);
             break;
             
         case "d":
@@ -301,6 +329,7 @@ public class ProjetoPi {
         	} else {
         		System.out.println("\nEntrevistadora: Tem certeza? Ok. Vamos para a próxima pergunta."); // Mensagem para resposta incorreta
         	}
+    		select2 = listaResp2.get(3);
             break;
             
         default:
@@ -325,6 +354,7 @@ public class ProjetoPi {
         System.out.println(embaralhaResp3);
         
         String resposta_pergunta_3 = entrada.next();
+        select3 = null;
         String correct_resp3 = b;
         String resp_alt3 = d;
 
@@ -344,6 +374,7 @@ public class ProjetoPi {
         		} else {
         			System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
         		}
+        		select3 = listaResp3.get(0);
                 break;
                 
         	case "b":
@@ -361,7 +392,9 @@ public class ProjetoPi {
         		} else {
         			System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
         		}
+        		select3 = listaResp3.get(1);
                 break;
+                
         	case "c":
         	case "C":
         		if(listaResp3.get(2) == correct_resp3) {
@@ -377,7 +410,9 @@ public class ProjetoPi {
         		} else {
         			System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
         		}
+        		select3 = listaResp3.get(2);
                 break;
+                
         	case "d":
         	case "D":
         		if(listaResp3.get(3) == correct_resp3) {
@@ -393,6 +428,7 @@ public class ProjetoPi {
         		} else {
         			System.out.println("\nEntrevistador: Tem certeza? Ok. Esta foi a última pergunta."); // Mensagem para resposta incorreta
         		}
+        		select3 = listaResp3.get(3);
                 break;
                 
         	default:
@@ -421,7 +457,40 @@ public class ProjetoPi {
                     + "\nSe você se conhece mas não conhece o inimigo, para cada vitória ganha sofrerá também uma derrota.\n"
                     + "Se você não conhece nem o inimigo nem a si mesmo, perderá todas as batalhas...\""
                     + "                                      \n                                                   Sun Tzu - A Arte da Guerra\n\n\n");
+        
+            System.out.println("\n\nLamentamos "+nome_jogador+", suas respostas não atenderam os critérios da empresa."
+            		+ "\n\nGostaria de tentar fazer a entrevista de novo?"
+            		+ "\n1 - Sim / 2 - Não.");
+            		refCap1 = entrada.next().toUpperCase();
+            		switch (refCap1) {
+            		case "1":
+            		case "SIM":
+            			System.out.println("\n\nMas antes de prosseguir, gostaria de receber umas dicas sobre a entrevistas?"
+            					+ "\n1 - Sim / 2 - Não.");
+            			String refDic = entrada.next().toUpperCase();
+            			switch (refDic) {
+            			case "1":
+                		case "SIM":
+            				if (select1 != correct_resp) {
+            					System.out.println("\n- Sua habilidade de trabalho em equipe é um ponto fraco.");
+            				}
+            				if (select2 != correct_resp2) {
+            					System.out.println("\n- Sua habilidade de Gerenciamento de Tempo pode ser aprimorada.");
+            				}
+            				if (select3 != correct_resp3)  {
+            					System.out.println("\n- Ser mais disposto a aprender é essencial no nosso ambiente de trabalho.");
+            				}
+            			}
+            		break;
+            		default:
+            			System.exit(0);
+            		}
+            		System.out.println("\nLembre-se de que a entrevista é uma oportunidade para mostrar suas habilidades e qualificações."
+            						+ "\nO mercado de trabalho valoriza candidatos que podem se adaptar e aprender com suas experiências."
+            						+ "\n-------------------------------------------------------------------------------------------------------------");
+            		avancarDialogo();
         }
+        }while (refCap1.equalsIgnoreCase("Sim") || refCap1.equalsIgnoreCase("1"));
     }
 
     // LISTA DE COISAS QUE FALTARAM PRA FAZER NO CAPITULO 1!!!!!!!!!!!!!!
@@ -779,9 +848,7 @@ public class ProjetoPi {
        if (resposta2 == 'A' || resposta2 == 'C') {
        System.out.println("\n\"Desconsiderar as preocupações dos trabalhadores pode levar à resistência, e ignorar completamente os princípios da Administração "
        		+ "\nCientífica pode resultar em falta de eficiência.\"");
-      
-       System.out.println("Pressione ENTER para avançar para a próxima pergunta.");
-       scanner.nextLine();
+       
        } else if (resposta2 == 'B') {
        
        }
@@ -803,13 +870,11 @@ public class ProjetoPi {
         } else if (resposta3 == 'B') {
             avancarDialogo();
         }
-
         
         System.out.println("------------------------ Apartamento de " + nome_jogador + " - Noite. --------------------");
         System.out.println(nome_jogador + " retorna para casa, refletindo sobre o dia. "
-        		+ ": \"Foi um dia cansativo, a muito o que se fazer, espero estar no caminho certo, e melhor eu ir descansar, para poder pensar melhor diante dessa semana cheia de trabalho, bora dormir!\"");
+        		+ "\n\"Foi um dia cansativo, a muito o que se fazer, espero estar no caminho certo, é melhor eu ir descansar, para poder pensar \nmelhor diante dessa semana cheia de trabalho, bora dormir!\"");
         avancarDialogo();
-
         
         capitulo_5();
     }
@@ -831,12 +896,11 @@ public class ProjetoPi {
         Scanner entrada = new Scanner(System.in);
         
         pedirNome();
-    	String c = null;
-        
+    	
         System.out
                 .println("Mesmo após ter assumido um cargo de liderança e tentado diversas vezes implementar melhorias "
                         + "na empresa\nCorpoTech, o pessoal da alta gerência vem ignorando o seu trabalho, "
-                        + c
+                        + nome_jogador
                         + " viu que a empresa \nnão estava respeitando a missão, visão e valores que lhe foi apresentado no dia da entrevista. ");
 
         avancarDialogo();
