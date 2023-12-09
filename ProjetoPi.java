@@ -803,6 +803,13 @@ public class ProjetoPi {
         } else if (resposta3 == 'B') {
             avancarDialogo();
         }
+
+        
+        System.out.println("------------------------ Apartamento de " + nome_jogador + " - Noite. --------------------");
+        System.out.println(nome_jogador + " retorna para casa, refletindo sobre o dia. "
+        		+ ": \"Foi um dia cansativo, a muito o que se fazer, espero estar no caminho certo, e melhor eu ir descansar, para poder pensar melhor diante dessa semana cheia de trabalho, bora dormir!\"");
+        avancarDialogo();
+
         
         capitulo_5();
     }
@@ -824,11 +831,12 @@ public class ProjetoPi {
         Scanner entrada = new Scanner(System.in);
         
         pedirNome();
-    	
+    	String c = null;
+        
         System.out
                 .println("Mesmo após ter assumido um cargo de liderança e tentado diversas vezes implementar melhorias "
                         + "na empresa\nCorpoTech, o pessoal da alta gerência vem ignorando o seu trabalho, "
-                        + nome_jogador
+                        + c
                         + " viu que a empresa \nnão estava respeitando a missão, visão e valores que lhe foi apresentado no dia da entrevista. ");
 
         avancarDialogo();
