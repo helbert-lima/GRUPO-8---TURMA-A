@@ -70,7 +70,7 @@ public class ProjetoPi {
         System.out.println("\n..:: A JORNADA DO NOVATO - Capítulos da História ::..");
         do {
             System.out.println(
-                    "\n\n1 - A 1º entrevista de emprego\n2 - Os Anseios dos Recursos humanos\n3 - O Despertar!\n4 - Liderança e Mudança\n5 - A Revolução Corporativa");
+                    "\n\n1 - A 1º entrevista de emprego\n2 - Os Anseios dos Recursos humanos\n3 - O Despertar!\n4 - Liderança e Mudança\n5 - A Revolução Corporativa\n\n6 - Voltar/Sair");
             escolha_capitulo = entrada.nextInt();
             if (escolha_capitulo == 1) {
                 capitulo_1();
@@ -82,10 +82,12 @@ public class ProjetoPi {
                 capitulo_4();
             } else if (escolha_capitulo == 5) {
                 capitulo_5();
+            } else if (escolha_capitulo == 6) {
+                menu();
             } else {
                 System.out.println("\nOpção inválida, digite novamente: ");
             }
-        } while (escolha_capitulo != 1 && escolha_capitulo != 2 && escolha_capitulo != 3 && escolha_capitulo != 4 && escolha_capitulo != 5);
+        } while (escolha_capitulo != 1 && escolha_capitulo != 2 && escolha_capitulo != 3 && escolha_capitulo != 4 && escolha_capitulo != 5 && escolha_capitulo != 6);
     }
     
     static void instrução() {
@@ -493,54 +495,7 @@ public class ProjetoPi {
         }while (refCap1.equalsIgnoreCase("Sim") || refCap1.equalsIgnoreCase("1"));
     }
 
-    // LISTA DE COISAS QUE FALTARAM PRA FAZER NO CAPITULO 1!!!!!!!!!!!!!!
-
-    // Ler observações
-    // Verificar se as respostas estão corretamente para avançar para o próximo
-    // capítulo, se
-    /*
-     * estiverem todas corretas apresentará a mensagem a seguir:
-     * “Parabéns, Alex, suas respostas indicam que você é o candidato perfeito! Seja
-     * Bem-Vindo
-     * a CorpoTech”
-     * // Se o usuário errar algumas das perguntas ao final da entrevista
-     * apresentará a mensagem
-     * a seguir:
-     * “Lamentamos Alex, suas respostas não atendem os critérios da empresa”
-     * // Será mostrado observações do ponto a ser melhorado (Seria como se fosse
-     * uma Dica do
-     * jogo)
-     * “Observação da pergunta 1: “Sua habilidade de trabalho em equipe é um ponto
-     * fraco.”
-     * “Observação da pergunta 2: “Você precisa melhor sua capacidade de lidar com
-     * feedback”
-     * “Observação da pergunta 3: “Sua habilidade de gerenciamento de tempo pode ser
-     * aprimorada”
-     * “Observação da pergunta 4: “Sua capacidade de gerenciamento de conflitos pode
-     * ser uma
-     * preocupação”
-     * “Observação da pergunta 5: “Ser mais disposto a aprender é essencial no nosso
-     * ambiente
-     * de trabalho”
-     * //Apresentar as observações das respostas errada apenas, se ele errar as 5,
-     * apresentar as
-     * cinco observações, se errar 2. apresentar duas observações.
-     * //Após as observações de cada pergunta, perguntar ao jogador se ele:
-     * “Deseja tentar Novamente? Digite “Sim” para tentar novamente, se digitar
-     * “Não”, “Fim de
-     * jogo”
-     * //Se ele digitar “Sim”, perguntar se ele deseja uma Dica/ Observação geral
-     * para fazer a
-     * entrevista novamente, tipo assim:
-     * “Sim” > “Deseja uma Dica para Tentar novamente a entrevista?”
-     * //Se ele digitar “Sim” para a dica apresentar a seguinte mensagem da dica:
-     * “Lembre-se de que a entrevista é uma oportunidade para mostrar suas
-     * habilidades e qualificações”
-     * “O mercado de trabalho valoriza candidatos que podem se adaptar e aprender
-     * com suas
-     * experiências”
-     * // Após a Mensagem/Dica acima ir para as 5 perguntas da entrevista novamente.
-     */
+    //Sequência para o Capítulo 2...
 
     static void capitulo_2() {
         Scanner entrada = new Scanner(System.in);
@@ -827,15 +782,17 @@ public class ProjetoPi {
                 "Opção A: Apenas as necessidades imediatas da empresa.\n" +
                 "Opção B: Um equilíbrio entre as necessidades da empresa e o bem-estar dos funcionários.\n" +
                 "Opção C: A satisfação pessoal dos líderes.");
-        char resposta1 = ConferenciaDeResposta(scanner);
-        if (resposta1 == 'A' || resposta1 == 'C') {
+        System.out.print("\nEscolha a opção correta (A, B ou C): ");
+        String resposta1 = scanner.next().toUpperCase();
+        if (resposta1.equalsIgnoreCase("A") || resposta1.equalsIgnoreCase("C")) {
             System.out.println("\n\"Priorizar apenas as necessidades imediatas da empresa pode negligenciar o impacto nas pessoas, e a satisfação pessoal "
             		+ "\ndos líderes pode não refletir nas necessidades organizacionais ou dos funcionários.\"");
-        } else if (resposta1 == 'B') {
+        } else if (resposta1.equalsIgnoreCase("B")) {
+        	   avancarDialogo();
         }
         
         // Pergunta 2
-       System.out.println(nome_jogador + " decide analisar as tarefas da equipe em busca de eficiência. Um colega pergunta sobre a abordagem.");
+       System.out.println("\n"+nome_jogador + " decide analisar as tarefas da equipe em busca de eficiência. Um colega pergunta sobre a abordagem.");
        System.out.println("Colega: \"Você está seguindo a Administração Científica. Isso não vai prejudicar a moral dos trabalhadores?\"");
        System.out.println(nome_jogador + ": Preciso equilibrar eficiência com o bem-estar. Como podemos fazer isso?\"");
        avancarDialogo();
@@ -844,13 +801,14 @@ public class ProjetoPi {
         "Opção A: Desconsiderar as preocupações dos trabalhadores para alcançar a eficiência máxima.\n" +
         "Opção B: Analisar as tarefas de maneira cuidadosa e incluir os trabalhadores no processo de decisão.\n" +
         "Opção C: Ignorar completamente os princípios da Administração Científica.");
-       char resposta2 = ConferenciaDeResposta(scanner);
-       if (resposta2 == 'A' || resposta2 == 'C') {
+       System.out.print("\nEscolha a opção correta (A, B ou C): ");
+       String resposta2 = scanner.next();
+       if (resposta2.equalsIgnoreCase("A") || resposta2.equalsIgnoreCase("C")) {
        System.out.println("\n\"Desconsiderar as preocupações dos trabalhadores pode levar à resistência, e ignorar completamente os princípios da Administração "
        		+ "\nCientífica pode resultar em falta de eficiência.\"");
        
-       } else if (resposta2 == 'B') {
-       
+       } else if (resposta2.equalsIgnoreCase("B")) {
+    	   avancarDialogo();
        }
        
         // Pergunta 3
@@ -863,15 +821,16 @@ public class ProjetoPi {
                 + "Opção A: Ignorar a hierarquia organizacional.\n"
                 + "Opção B: Valorização da especialização do trabalho.\n"
                 + "Opção C: Desprezar completamente a autonomia.");
-        char resposta3 = ConferenciaDeResposta(scanner);
-        if (resposta3 == 'A' || resposta3 == 'C') {
+        System.out.print("\nEscolha a opção correta (A, B ou C): ");
+        String resposta3 = scanner.next().toUpperCase();
+        if (resposta3.equalsIgnoreCase("A") || resposta3.equalsIgnoreCase("C")) {
             System.out.println("\n\"Ignorar a hierarquia organizacional ou desprezar completamente a autonomia pode resultar em problemas de liderança e descontentamento dos funcionários.\"");
-            avancarDialogo();
-        } else if (resposta3 == 'B') {
-            avancarDialogo();
+            
+        } else if (resposta3.equalsIgnoreCase("B")) {
+        	   avancarDialogo();
         }
         
-        System.out.println("------------------------ Apartamento de " + nome_jogador + " - Noite. --------------------");
+        System.out.println("\n------------------------ Apartamento de " + nome_jogador + " - Noite. --------------------");
         System.out.println(nome_jogador + " retorna para casa, refletindo sobre o dia. "
         		+ "\n\"Foi um dia cansativo, a muito o que se fazer, espero estar no caminho certo, é melhor eu ir descansar, para poder pensar \nmelhor diante dessa semana cheia de trabalho, bora dormir!\"");
         avancarDialogo();
@@ -879,17 +838,7 @@ public class ProjetoPi {
         capitulo_5();
     }
 
-    // Função para obter a resposta do usuário
-    static char ConferenciaDeResposta(Scanner scanner) {
-        System.out.print("\nEscolha a opção correta (A, B ou C): ");
-        String input = scanner.nextLine().toUpperCase();
-        return input.charAt(0);
-        
-    }
-
-
     
-
     static void capitulo_5() {
         System.out
                 .println("\n\n     ..:: CAPITULO 5 ::..         \n" + "\n     A REVOLUÇÃO CORPORATIVA         \n\n\n");
