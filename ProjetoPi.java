@@ -152,6 +152,7 @@ public class ProjetoPi {
         Scanner entrada = new Scanner(System.in);
         String a, b, c, d, refCap1 = null;
         String select1, select2, select3;
+        int respostasCorretas;
         System.out
                 .println("\n\n     ..:: CAPITULO 1 ::..         \n" + "\n     A ENTREVISTA DE EMPREGO         \n\n\n");
 
@@ -195,7 +196,7 @@ public class ProjetoPi {
         select1 = null;
         String correct_resp = b;
         String resp_alt = d;
-        int respostasCorretas = 0;
+        respostasCorretas = 0;
 
         switch(resposta_pergunta_1){
         	case "a":
@@ -492,7 +493,7 @@ public class ProjetoPi {
             						+ "\n-------------------------------------------------------------------------------------------------------------");
             		avancarDialogo();
         }
-        }while (refCap1.equalsIgnoreCase("Sim") || refCap1.equalsIgnoreCase("1"));
+        }while (refCap1.equalsIgnoreCase("Sim") || refCap1.equalsIgnoreCase("1") && respostasCorretas < 3);
     }
 
     //Sequência para o Capítulo 2...
@@ -539,14 +540,10 @@ public class ProjetoPi {
                 "No horário, o instrutor chega a sala de treinamento, inicia a apresentação, destacando a missão,\r\n" + //
                         "visão e valores da CorpoTech.\r\n" +
                         "\nBom dia, " + nome_jogador
-                        + ". Gostaria de saber um pouco mais sobre a missão, visão e valores da empresa?");
+                        + ". Vamos falar um pouco mais sobre a missão, visão e valores da empresa..\n");
 
-        System.out.println("\n1 - Sim. | 2 - Não...");
-        int escolha_mvv = entrada.nextInt();
+	    	avancarDialogo();
 
-        avancarDialogo();
-
-        if (escolha_mvv == 1) {
             System.out.println(
                     "\nInstrutor: Aqui na CorpoTech nossa missão é potencializar talentos, impulsionando o crescimento profissional \ne pessoal dos nossos colaboradores.");
 
@@ -564,10 +561,7 @@ public class ProjetoPi {
                     + "\nÉtica: Atuamos com integridade, transparência e responsabilidade."
                     + "\nRespeito: Cultivamos um ambiente onde o respeito e a empatia são fundamentais."
                     + "\nSustentabilidade: Comprometemo-nos com práticas empresariais sustentáveis para um futuro melhor.");
-        } else {
-            System.out.println(
-                    "\nIntrutor: Como quiser.");
-        }
+        
 
         avancarDialogo();
 
@@ -637,24 +631,11 @@ public class ProjetoPi {
         avancarDialogo();
 
         System.out.println(nome_jogador + " retorna para casa, refletindo sobre o dia. Ele recebe mensagens"
-                + " automáticas da CorpoTech, " + "\nlembrando-o de prazos e regras. " + nome_jogador + ":");
+                + " automáticas da CorpoTech, " + "\nlembrando-o de prazos e regras.");
 
-        System.out
-                .println("\n\nOpção 1: Decide seguir as orientações à risca, evitando qualquer confronto com a empresa."
-                        + "\n\nOpção 2: Questiona internamente se vale a pena sacrificar sua "
-                        + "individualidade em prol do sucesso corporativo.");
+        System.out.println("\n"+nome_jogador+": Bom, vou descansar pois amanhã o dia será cheio...");
 
-        int escolha_comportamento3 = entrada.nextInt();
-
-        if (escolha_comportamento3 == 1) {
-            System.out.println("\n" + nome_jogador + ": Bom, é hora de dormir.");
-            avancarDialogo();
-            capitulo_3();
-        } else {
-            System.out.println("\n" + nome_jogador + ": Tsc. Que saco.");
-            avancarDialogo();
-            capitulo_3();
-        }
+        capitulo_3();
     }
 
     static void capitulo_3() {
@@ -719,22 +700,7 @@ public class ProjetoPi {
             System.out.println("\nColega: Isso não me parece ser sensato......");
         }
 
-        System.out.println("Pergunta 3 - Quais métodos são utilizados para gerenciar o tempo e priorizar tarefas?\r\n" + //
-                "\r\n" + //
-                "A) Matriz de Eisenhower (Tabela de Prioridades)\r\n" + //
-                "B) Método da aleatoriedade\r\n" + //
-                "C) Abordagem do último a chegar, primeiro a fazer\r\n" + //
-                "D) Técnica do pior para o melhor");
-
-        String resposta_pergunta_3_cap_3 = entrada.next();
-        if (resposta_pergunta_3_cap_3.equalsIgnoreCase("A")) {
-            System.out.println("\nColega: Concordo plenamente!");
-            respostasCorretas_cap_3++;
-
-        } else {
-            System.out.println("\nColega: Isso não me parece ser sensato......");
-        }
-        int totalPerguntas_cap3 = 3;
+        int totalPerguntas_cap3 = 2;
         if (respostasCorretas_cap_3 == totalPerguntas_cap3) {
             System.out.println("\n"
                     + nome_jogador
@@ -816,19 +782,6 @@ public class ProjetoPi {
         System.out.println("Funcionário: \"Mudança sempre assusta. Estamos perdendo a autonomia. Isso é administração clássica?\"");
         System.out.println(nome_jogador + " :Estamos buscando eficiência, mas não quero sacrificar tudo. Como posso promover a mudança sem perder a autonomia? O que tem a me sugerir? \"");
         avancarDialogo();
-
-        System.out.println("\nQual característica da abordagem clássica pode ajudar " + nome_jogador + " a promover mudanças sem perder a autonomia dos trabalhadores?\n"
-                + "Opção A: Ignorar a hierarquia organizacional.\n"
-                + "Opção B: Valorização da especialização do trabalho.\n"
-                + "Opção C: Desprezar completamente a autonomia.");
-        System.out.print("\nEscolha a opção correta (A, B ou C): ");
-        String resposta3 = scanner.next().toUpperCase();
-        if (resposta3.equalsIgnoreCase("A") || resposta3.equalsIgnoreCase("C")) {
-            System.out.println("\n\"Ignorar a hierarquia organizacional ou desprezar completamente a autonomia pode resultar em problemas de liderança e descontentamento dos funcionários.\"");
-            
-        } else if (resposta3.equalsIgnoreCase("B")) {
-        	   avancarDialogo();
-        }
         
         System.out.println("\n------------------------ Apartamento de " + nome_jogador + " - Noite. --------------------");
         System.out.println(nome_jogador + " retorna para casa, refletindo sobre o dia. "
